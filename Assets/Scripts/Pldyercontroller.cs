@@ -21,17 +21,17 @@ public class Pldyercontroller : MonoBehaviour
         } 
     }
     [SerializeField]
-    private bool _isleftattacking = false;
-    public bool IsLeftAttacking
+    public bool _isattack = false;
+    public bool IsAttack
     {
         get
         {
-            return _isleftattacking;
+            return _isattack;
         }
         private set
         {
-            _isleftattacking = value;
-            animator.SetBool("isleftattacking", value);
+            _isattack = value;
+            animator.SetBool("isattack", value);
         }
     }
 
@@ -52,6 +52,7 @@ public class Pldyercontroller : MonoBehaviour
         }
     }
 
+    
 
     Rigidbody2D rb;
     Animator animator;
@@ -96,15 +97,41 @@ public class Pldyercontroller : MonoBehaviour
         }
     }
 
-    public void OnLeftAttacking(InputAction.CallbackContext context)
+    public void OnAttack(InputAction.CallbackContext context)
     {
         if (context.started)
         {
-            IsLeftAttacking = true;
+            IsAttack = true;
         }
         else if (context.canceled)
         {
-            IsLeftAttacking=false;
+            IsAttack=false;
         }
     }
+    public bool _bigattack = false;
+    public bool BigAttack
+    {
+        get
+        {
+            return _bigattack;
+        }
+        private set
+        {
+            _bigattack = value;
+            animator.SetBool("bigattack", value);
+        }
+    }
+    public void OnBigAttack(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            BigAttack = true;
+        }
+        else if (context.canceled)
+        {
+            BigAttack = false;
+        }
+    }
+
+
 }

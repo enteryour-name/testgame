@@ -86,7 +86,7 @@ SpriteRenderer:
   m_Size: {x: 4, y: 4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &2269758971109446228
@@ -102,6 +102,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkspeed: 5
+  _ismoving: 0
+  _isleftattacking: 0
+  _isfacingright: 1
 --- !u!50 &3040464403475177689
 Rigidbody2D:
   serializedVersion: 4
@@ -210,7 +213,19 @@ MonoBehaviour:
     m_ActionId: 82334bc9-1526-49c1-a1f1-d7abecc27acb
     m_ActionName: Player/Look
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2269758971109446228}
+        m_TargetAssemblyTypeName: Pldyercontroller, Assembly-CSharp
+        m_MethodName: OnAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: ef14df0f-67aa-407d-9be4-e39a843e762e
     m_ActionName: Player/Attack
   - m_PersistentCalls:
@@ -253,6 +268,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 22545815-0800-47e4-ae35-0179bd8c377f
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 42304630-7a0b-4ea0-85ac-3eed2371763d
+    m_ActionName: Player/Run[/Keyboard/leftShift]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

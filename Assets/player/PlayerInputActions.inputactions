@@ -29,13 +29,22 @@
                     "id": "ef14df0f-67aa-407d-9be4-e39a843e762e",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
+                    "interactions": "Press,Press",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Run",
                     "type": "Button",
                     "id": "42304630-7a0b-4ea0-85ac-3eed2371763d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BigAttack",
+                    "type": "Button",
+                    "id": "f7aea2f7-e1be-4128-92d0-bcd9cb9a8d8b",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -214,7 +223,7 @@
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Gamepad",
+                    "groups": "Gamepad;Keyboard&Mouse;Touch;Joystick;XR",
                     "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -265,12 +274,23 @@
                 },
                 {
                     "name": "",
-                    "id": "bdba9682-538e-48f2-8502-791f397f426f",
-                    "path": "<Keyboard>/leftShift",
-                    "interactions": "",
+                    "id": "2c45e62b-513e-49de-8f6a-7cc9131db221",
+                    "path": "<Keyboard>/j",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Run",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "89937642-972a-4ec2-bdb7-cce612d676e1",
+                    "path": "<Keyboard>/i",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "BigAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
