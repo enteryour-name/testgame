@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,12 +8,57 @@ public class Pldyercontroller : MonoBehaviour
 {
     public float walkspeed = 5f;
     Vector2 moveInput;
-    Rigidbody2D rb;
+    [SerializeField]
+    private bool _ismoving = false;
+    public bool IsMoving { get
+        {
+            return _ismoving;
+        }
+        private set
+        {
+            _ismoving = value;
+            animator.SetBool("ismoving", value);
+        } 
+    }
+    [SerializeField]
+    private bool _isleftattacking = false;
+    public bool IsLeftAttacking
+    {
+        get
+        {
+            return _isleftattacking;
+        }
+        private set
+        {
+            _isleftattacking = value;
+            animator.SetBool("isleftattacking", value);
+        }
+    }
 
-    public bool Ismoving { get; private set; }
+    public bool _isfacingright = true;
+    public bool IsFacingRight
+    {
+        get
+        {
+            return _isfacingright;
+        }
+        private set
+        {
+            if (_isfacingright != value)
+            {
+                transform.localScale *= new Vector2(-1, 1);
+            }
+            _isfacingright = value;
+        }
+    }
+
+
+    Rigidbody2D rb;
+    Animator animator;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
     // Start is called before the first frame update
     void Start()
@@ -32,6 +78,33 @@ public class Pldyercontroller : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
-        Ismoving = moveInput != Vector2.zero;
+        IsMoving = moveInput != Vector2.zero;
+        SetFacingDirection(moveInput);
+    }
+
+    private void SetFacingDirection(Vector2 moveInput)
+    {
+        if (moveInput.x > 0 && !IsFacingRight)
+        {
+            //face the right
+            IsFacingRight = true;
+        }
+        else if(moveInput.x<0&&IsFacingRight)
+        {
+            //face the left
+            IsFacingRight = false;
+        }
+    }
+
+    public void OnLeftAttacking(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            IsLeftAttacking = true;
+        }
+        else if (context.canceled)
+        {
+            IsLeftAttacking=false;
+        }
     }
 }
