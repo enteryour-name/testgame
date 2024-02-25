@@ -351,7 +351,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: attack
+    m_ConditionEvent: isattack
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
@@ -484,19 +484,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 1
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isattack
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 1
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: bigattack
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -766,16 +766,16 @@ AnimatorStateMachine:
   - {fileID: 4504025901912243828}
   - {fileID: -8348836989026192661}
   m_StateMachineTransitions:
-  - first: {fileID: 7076476244295810420}
-    second:
-    - {fileID: 8072616426933336231}
-    - {fileID: -4109147574145328370}
-    - {fileID: 8451759598417188267}
   - first: {fileID: -960128171684267643}
     second:
     - {fileID: -7790488393027481658}
     - {fileID: 3894956170133563637}
     - {fileID: -4833221369453920676}
+  - first: {fileID: 7076476244295810420}
+    second:
+    - {fileID: 8072616426933336231}
+    - {fileID: -4109147574145328370}
+    - {fileID: 8451759598417188267}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 90, y: 130, z: 0}
@@ -867,7 +867,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: attack
+    m_ConditionEvent: isattack
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}

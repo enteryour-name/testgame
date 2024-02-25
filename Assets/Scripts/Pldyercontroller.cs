@@ -64,7 +64,8 @@ public class Pldyercontroller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        IsAttack = false;
+        IsMoving = false;
     }
   
     // Update is called once per frame
