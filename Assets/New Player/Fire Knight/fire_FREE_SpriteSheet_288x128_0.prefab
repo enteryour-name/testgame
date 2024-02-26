@@ -123,7 +123,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 4.5543203
+  m_Mass: 1821.7281
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 20
@@ -185,10 +185,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64d0a6b39e357fe4fab66ac3d89cd7d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rollrate: 20
   walkspeed: 5
   _firemove: 0
   _fireisfacingright: 1
   _fireattack2: 0
+  jumpimpulse: 20
+  _fireattack1: 0
+  _fireattack3: 0
+  _fireattack4: 0
+  _fireattack5: 0
+  _roll: 0
 --- !u!114 &130058003322380810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,6 +297,34 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 36d3c69b-3998-4050-b9ce-1fef5ccc4167
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cf7cdab3-53c5-4899-b561-6daa996a2ed5
+    m_ActionName: Player/Jump[/Keyboard/k]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 40edd692-6c19-4197-b28c-f5bbd2662686
+    m_ActionName: Player/AirAttack[/Keyboard/j]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 994c7673-5358-43cb-aa1a-8a47d7c453c4
+    m_ActionName: Player/Attack1[/Keyboard/j]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fbccb52a-353f-47c3-86d9-ef88b6519b9f
+    m_ActionName: Player/Attack3[/Keyboard/u]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8ee44e47-42e8-42ce-82d0-409bcf29fc80
+    m_ActionName: Player/Attack4[/Keyboard/i]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a29d250c-5037-4c6f-bd71-deb56deeb071
+    m_ActionName: Player/Attack5[/Keyboard/o]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6f3226ad-46bc-40a3-956c-aa8591398eec
+    m_ActionName: Player/Roll[/Keyboard/h]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
