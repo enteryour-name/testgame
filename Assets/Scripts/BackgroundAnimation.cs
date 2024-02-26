@@ -11,17 +11,34 @@ public class BackgroundAnimation : MonoBehaviour
     public float amplitudeY = 1f;
     public float frequency = 1f;
     public float sita = 30f;
+    public void trianglef()
+    {
+        float getsin()
+        {
+           return  Mathf.Sin(Time.time * frequency) * amplitudeX;
+        }
+        float getcos()
+        {
+        return Mathf.Cos(Time.time * frequency) * amplitudeY;
+        }
+    }
     Transform transform = null;
     private Vector3 startPos;
+    void newmove()
+    {
+        float3 delmove = new float3(speed, 0,0);
+        delmove = new Vector3(speed + (float)Mathf.Sin(Time.time * frequency) * amplitudeX, (float)Mathf.Cos(Time.time * frequency) * amplitudeY,0f);
+        transform.position += new Vector3(math.cos(sita) * delmove.x+math.sin(sita)*delmove.y, math.sin(sita) * delmove.x+math.cos(sita)*delmove.y,0);
 
+    }
     void Start()
     {
-        sita = 30f / 180f * 3.14f;
+        sita = sita / 180f * 3.14f;
         transform = GetComponent<Transform>();
         startPos = transform.position;
         Debug.Log(startPos);
     }
-    void move()
+    void ovalmove()
     {
         float newY = Mathf.Sin(Time.time * frequency) * amplitudeX;
         float newX = Mathf.Cos(Time.time * frequency) * amplitudeY;
@@ -52,12 +69,6 @@ public class BackgroundAnimation : MonoBehaviour
     }
     void Update()
     {
-        move();
-    }
-    private void FixedUpdate()
-    {
-        amplitudeX *= 1.001f;
-        amplitudeY *= 1.001F ;
-        frequency *= 0.99f;
+        newmove();
     }
 }
