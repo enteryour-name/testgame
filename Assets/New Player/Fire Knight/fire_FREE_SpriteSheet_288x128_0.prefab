@@ -123,7 +123,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 4.5543203
+  m_Mass: 1821.7281
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 20
@@ -194,7 +194,11 @@ MonoBehaviour:
   _fireattack1: 0
   _fireattack3: 0
   _fireattack4: 0
+<<<<<<< HEAD
   _fireattack5: 1
+=======
+  _fireattack5: 0
+>>>>>>> d82e6ed681e7761287d8b498b79de43234cb2f05
   _roll: 0
 --- !u!114 &130058003322380810
 MonoBehaviour:
@@ -302,6 +306,7 @@ MonoBehaviour:
     m_ActionId: cf7cdab3-53c5-4899-b561-6daa996a2ed5
     m_ActionName: Player/Jump[/Keyboard/k]
   - m_PersistentCalls:
+<<<<<<< HEAD
       m_Calls:
       - m_Target: {fileID: 2124662020634083954}
         m_TargetAssemblyTypeName: Firecontrol, Assembly-CSharp
@@ -315,6 +320,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+=======
+      m_Calls: []
+>>>>>>> d82e6ed681e7761287d8b498b79de43234cb2f05
     m_ActionId: 40edd692-6c19-4197-b28c-f5bbd2662686
     m_ActionName: Player/AirAttack[/Keyboard/j]
   - m_PersistentCalls:
