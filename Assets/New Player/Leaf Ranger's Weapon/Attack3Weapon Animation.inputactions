@@ -33,9 +33,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Attack3Weapon",
+                    "name": "Attack3weapon",
                     "type": "Button",
-                    "id": "a0f788b8-f43d-4c8a-9c75-8f602ff6311a",
+                    "id": "8484a92d-58d0-4115-8bd0-b2519718e375",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -265,12 +265,12 @@
                 },
                 {
                     "name": "",
-                    "id": "964528eb-e67d-4d82-9271-feb9bad34f5e",
-                    "path": "<Keyboard>/u",
+                    "id": "174c3347-ab0e-4680-8aa0-25d33ac7e477",
+                    "path": "",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Attack3Weapon",
+                    "groups": "",
+                    "action": "Attack3weapon",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

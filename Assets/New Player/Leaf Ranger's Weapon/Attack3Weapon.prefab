@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 15077226829261094}
   - component: {fileID: 1397747491955990066}
   - component: {fileID: 1992483007834923254}
-  - component: {fileID: 1335269655965451137}
   - component: {fileID: 6485701707754924198}
   m_Layer: 0
   m_Name: Attack3Weapon
@@ -29,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5770076562528545330}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.47, y: -1.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -76,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -514666319, guid: 7560922bcf061394a9f920b289017e06, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -121,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 08f605596c73b0a4eabd9a04df355544, type: 3}
+  m_Actions: {fileID: 0}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -136,140 +135,65 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 63d7e0ee-830c-4067-8fd3-4fe2cec26688
+    m_ActionId: a523ebae-953b-40d3-a4e5-a71cfdc379ed
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 9b4ccdd9-4058-4bdd-bc46-f90342086381
+    m_ActionId: 5371b49a-5cd6-4ff0-81ed-ee0719a5e9a6
     m_ActionName: Player/Look[/Mouse/delta,/Touchscreen/delta,/Pen/delta]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 2b6214da-5967-4358-9d58-e3937e27d329
+    m_ActionId: a55e64f7-28c1-4322-9192-4f0c5e0df7ca
     m_ActionName: Player/Fire[/Mouse/leftButton,/Touchscreen/primaryTouch/tap]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: a992b442-4ed6-4b79-9517-49ab558cc9dd
-    m_ActionName: Player/Attack2[/Keyboard/j]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 8ac93d3b-7a84-45f9-ae0c-1c6542dfe4bc
-    m_ActionName: Player/Attack3[/Keyboard/u]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 888e460b-7a8e-424d-b967-3d19338a4825
-    m_ActionName: Player/Attack4[/Keyboard/i]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 5a02350d-8c05-4ded-bad8-03007f77ab2c
-    m_ActionName: Player/Attack5[/Keyboard/o]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 595945a3-dd32-42e8-be5a-17e5afe4718a
-    m_ActionName: Player/Attack1[/Keyboard/j]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 0cfd5007-21ac-4bdf-aa88-133f5c9d23a4
-    m_ActionName: Player/Doublejump[/Keyboard/k]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2bad93ee-f686-4e39-955f-39aeaaef261e
-    m_ActionName: Player/Jump[/Keyboard/k]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2f6e3d2e-4b71-4148-86c5-39bdc34e89cb
-    m_ActionName: Player/Roll[/Keyboard/h]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3cf53b44-59b0-4725-8fd3-dd75e30ba191
-    m_ActionName: Player/Slide[/Keyboard/l]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3d886ab0-1430-4e30-95bb-b2a01de901f1
+    m_ActionId: 61506f7a-b2d5-4d58-aa1f-ea4c476ee858
     m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 16c59498-04cd-45fc-8c7d-bc9c1513cafb
+    m_ActionId: 0e7090b0-8dc2-40fa-ad89-50657af803be
     m_ActionName: UI/Submit[/Keyboard/enter]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 21078240-a3d8-4110-b1f2-80f22ea0540d
+    m_ActionId: d9e03c07-f124-48d3-bd56-4a730ca74d96
     m_ActionName: UI/Cancel[/Keyboard/escape]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: a3d443ec-5f9a-4548-b228-ef796e517319
+    m_ActionId: d466cada-c360-4a17-95d1-b3b1ac6408be
     m_ActionName: UI/Point[/Mouse/position,/Pen/position,/Touchscreen/touch0/position,/Touchscreen/touch1/position,/Touchscreen/touch2/position,/Touchscreen/touch3/position,/Touchscreen/touch4/position,/Touchscreen/touch5/position,/Touchscreen/touch6/position,/Touchscreen/touch7/position,/Touchscreen/touch8/position,/Touchscreen/touch9/position]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: a73daca8-e970-42ca-89ee-02d9e4f6fff7
+    m_ActionId: ab7e083b-4eb9-4633-96a8-8fef67edcef2
     m_ActionName: UI/Click[/Mouse/leftButton,/Pen/tip,/Touchscreen/touch0/press,/Touchscreen/touch1/press,/Touchscreen/touch2/press,/Touchscreen/touch3/press,/Touchscreen/touch4/press,/Touchscreen/touch5/press,/Touchscreen/touch6/press,/Touchscreen/touch7/press,/Touchscreen/touch8/press,/Touchscreen/touch9/press]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: b70ebad7-28c6-4a4a-b7b0-7f195e5ad223
+    m_ActionId: 4e28e35a-7700-426f-a5ca-f7343a42754d
     m_ActionName: UI/ScrollWheel[/Mouse/scroll]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: b64c8ccd-394d-4fa0-806f-898b1c5be1a5
+    m_ActionId: 6c9a3d90-9cad-4712-aaa2-a85d038fe3cc
     m_ActionName: UI/MiddleClick[/Mouse/middleButton]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 5c228a7e-c470-4af2-9079-6da2316c3f70
+    m_ActionId: dcc3681e-2ada-46e5-9860-3893f1d03930
     m_ActionName: UI/RightClick[/Mouse/rightButton]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 177f38e6-3804-4d27-9877-d1616f3f23b0
+    m_ActionId: 4b358dc3-e0e3-463e-8c7f-fc39cd606c33
     m_ActionName: UI/TrackedDevicePosition
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: a0e51319-5614-47b5-a20c-8a397e70b714
+    m_ActionId: 5fc20b3e-f6a7-468d-88d9-cc1b8669936a
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Leafranger, Assembly-CSharp
-        m_MethodName: OnLeafattack3weapon
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 8f80275e-87e4-4ffc-af42-1f0eeacf35c0
-    m_ActionName: Player/Attack3Weapon[/Keyboard/u]
+      m_Calls: []
+    m_ActionId: 8484a92d-58d0-4115-8bd0-b2519718e375
+    m_ActionName: Player/Attack3weapon
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!50 &1335269655965451137
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5770076562528545330}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &6485701707754924198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,4 +206,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a14c840003ce94187ba7b5bf78f05d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _leafattack3weapon: 0

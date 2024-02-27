@@ -1,14 +1,15 @@
-using JetBrains.Rider.Unity.Editor;
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+
 
 public class Attack1Weapon : MonoBehaviour
 {
    Leafranger leafranger;
     Animator animator;
     Rigidbody2D rb;
+    Touching touching;
     
 
    
@@ -19,6 +20,7 @@ public class Attack1Weapon : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+       
         
     }
     void Start()
@@ -30,8 +32,9 @@ public class Attack1Weapon : MonoBehaviour
     void Update()
     {
         animator = GetComponent<Animator>();
+        touching = transform.parent.GetComponent<Touching>();
         leafranger = transform.parent.GetComponent<Leafranger>();
-        if (leafranger != null && leafranger.Leafattack1)
+        if (leafranger != null && leafranger.Leafattack1&&!touching.IsGround)
         {
             animator.SetTrigger("leafattack1weapon");
 
