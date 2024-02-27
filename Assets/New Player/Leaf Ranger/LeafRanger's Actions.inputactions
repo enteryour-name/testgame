@@ -1,14 +1,14 @@
 {
-    "name": "Fireknight Input Actions",
+    "name": "LeafRanger's Actions",
     "maps": [
         {
             "name": "Player",
-            "id": "9b543b2d-502d-4e47-8129-bb432fab7ab6",
+            "id": "8b8149ee-cb09-457c-83a0-a914c2578d7c",
             "actions": [
                 {
                     "name": "Move",
                     "type": "Value",
-                    "id": "ad64504c-3a6a-42d4-bc72-69ce2df4cd6a",
+                    "id": "63d7e0ee-830c-4067-8fd3-4fe2cec26688",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -17,79 +17,16 @@
                 {
                     "name": "Look",
                     "type": "Value",
-                    "id": "a0ab9c0b-b96d-402c-b527-eba93d81f5ec",
+                    "id": "9b4ccdd9-4058-4bdd-bc46-f90342086381",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Attack",
+                    "name": "Fire",
                     "type": "Button",
-                    "id": "d208b882-8d25-4bd5-9ee7-a99c67047ab4",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Jump",
-                    "type": "Button",
-                    "id": "cf7cdab3-53c5-4899-b561-6daa996a2ed5",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Attack1",
-                    "type": "Button",
-                    "id": "994c7673-5358-43cb-aa1a-8a47d7c453c4",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Attack3",
-                    "type": "Button",
-                    "id": "fbccb52a-353f-47c3-86d9-ef88b6519b9f",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Attack4",
-                    "type": "Button",
-                    "id": "8ee44e47-42e8-42ce-82d0-409bcf29fc80",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Attack5",
-                    "type": "Button",
-                    "id": "a29d250c-5037-4c6f-bd71-deb56deeb071",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Roll",
-                    "type": "Button",
-                    "id": "6f3226ad-46bc-40a3-956c-aa8591398eec",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Doublejump",
-                    "type": "Button",
-                    "id": "11d96ca1-ffd9-4629-81f9-95bf121729a8",
+                    "id": "2b6214da-5967-4358-9d58-e3937e27d329",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -98,7 +35,88 @@
                 {
                     "name": "Attack2",
                     "type": "Button",
-                    "id": "a2157eec-a21b-44b4-955f-204d410ca077",
+                    "id": "a992b442-4ed6-4b79-9517-49ab558cc9dd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Attack3",
+                    "type": "Button",
+                    "id": "8ac93d3b-7a84-45f9-ae0c-1c6542dfe4bc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Attack4",
+                    "type": "Button",
+                    "id": "888e460b-7a8e-424d-b967-3d19338a4825",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Attack5",
+                    "type": "Button",
+                    "id": "5a02350d-8c05-4ded-bad8-03007f77ab2c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Attack1",
+                    "type": "Button",
+                    "id": "595945a3-dd32-42e8-be5a-17e5afe4718a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Doublejump",
+                    "type": "Button",
+                    "id": "0cfd5007-21ac-4bdf-aa88-133f5c9d23a4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "2bad93ee-f686-4e39-955f-39aeaaef261e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Roll",
+                    "type": "Button",
+                    "id": "2f6e3d2e-4b71-4148-86c5-39bdc34e89cb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Slide",
+                    "type": "Button",
+                    "id": "3cf53b44-59b0-4725-8fd3-dd75e30ba191",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Attack3Weapon",
+                    "type": "Button",
+                    "id": "8f80275e-87e4-4ffc-af42-1f0eeacf35c0",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -278,7 +296,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "Attack",
+                    "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -289,7 +307,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Attack",
+                    "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -300,7 +318,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Touch",
-                    "action": "Attack",
+                    "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -311,7 +329,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
-                    "action": "Attack",
+                    "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -322,35 +340,24 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "XR",
-                    "action": "Attack",
+                    "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "091093fb-9f6a-45ea-8b9b-91b6f91ba11f",
-                    "path": "<Keyboard>/k",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ea020a0e-6a3a-46f4-a59e-9f10a87f67cd",
+                    "id": "bf58d652-3c66-4466-9c06-b1543086fe41",
                     "path": "<Keyboard>/j",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Attack1",
+                    "action": "Attack2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "b25ab391-f509-4d4c-8afb-93e36b0314de",
+                    "id": "1521b955-edea-4b3d-aa01-787ff559e882",
                     "path": "<Keyboard>/u",
                     "interactions": "",
                     "processors": "",
@@ -361,7 +368,7 @@
                 },
                 {
                     "name": "",
-                    "id": "89d303fa-fe7c-4daa-98ca-b6b87eef57f9",
+                    "id": "9082d7a9-180c-4d29-b2a9-da924fedcb1e",
                     "path": "<Keyboard>/i",
                     "interactions": "",
                     "processors": "",
@@ -372,7 +379,7 @@
                 },
                 {
                     "name": "",
-                    "id": "10da5f15-c89c-4e7f-8dde-906487eebef3",
+                    "id": "3a48152b-ffeb-4322-ab5a-0cb7f26a4cfd",
                     "path": "<Keyboard>/o",
                     "interactions": "",
                     "processors": "",
@@ -383,7 +390,40 @@
                 },
                 {
                     "name": "",
-                    "id": "8ce79a1d-f5dd-495a-ac3e-48655ac72af6",
+                    "id": "d7ee93c2-52a0-4f03-80f1-50da241f53de",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Attack1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cadfa3b0-3fcb-4532-a20c-0a911e02e147",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Doublejump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f81660f2-3562-4118-a9b1-d23473c510fb",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d13bdbee-e729-45c3-b5b0-b347a0ec609b",
                     "path": "<Keyboard>/h",
                     "interactions": "",
                     "processors": "",
@@ -394,23 +434,23 @@
                 },
                 {
                     "name": "",
-                    "id": "2b4ba275-8ccd-41a0-bead-7272aa170dc4",
-                    "path": "<Keyboard>/k",
+                    "id": "e1840ab3-076f-43d6-8efb-db5b998ae373",
+                    "path": "<Keyboard>/l",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Doublejump",
+                    "action": "Slide",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "0d77422f-edca-4735-bac8-713d03803ec3",
-                    "path": "<Keyboard>/j",
+                    "id": "393709b6-0f9f-4818-ba47-eb619f2a454b",
+                    "path": "<Keyboard>/u",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Attack2",
+                    "action": "Attack3Weapon",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -418,12 +458,12 @@
         },
         {
             "name": "UI",
-            "id": "10a0f752-870c-4270-bf62-78ad30ec6819",
+            "id": "e313ebe7-9627-4d62-b6c9-406bfdd82fcd",
             "actions": [
                 {
                     "name": "Navigate",
                     "type": "PassThrough",
-                    "id": "a060a97a-aee1-4944-b5a7-eb309e541c1a",
+                    "id": "3d886ab0-1430-4e30-95bb-b2a01de901f1",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -432,7 +472,7 @@
                 {
                     "name": "Submit",
                     "type": "Button",
-                    "id": "c02e009a-85eb-4dab-853f-fae3d99273de",
+                    "id": "16c59498-04cd-45fc-8c7d-bc9c1513cafb",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -441,7 +481,7 @@
                 {
                     "name": "Cancel",
                     "type": "Button",
-                    "id": "ddbaed7c-e1e9-4963-bd8d-8fe780f392be",
+                    "id": "21078240-a3d8-4110-b1f2-80f22ea0540d",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -450,7 +490,7 @@
                 {
                     "name": "Point",
                     "type": "PassThrough",
-                    "id": "d3433a98-b03d-4105-ac9c-6f0b92ad9267",
+                    "id": "a3d443ec-5f9a-4548-b228-ef796e517319",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -459,7 +499,7 @@
                 {
                     "name": "Click",
                     "type": "PassThrough",
-                    "id": "86389e9e-2294-4ece-a277-0cf7f5d63c72",
+                    "id": "a73daca8-e970-42ca-89ee-02d9e4f6fff7",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -468,7 +508,7 @@
                 {
                     "name": "ScrollWheel",
                     "type": "PassThrough",
-                    "id": "9cf942db-0fcf-4e5b-b1db-f04974ba08bb",
+                    "id": "b70ebad7-28c6-4a4a-b7b0-7f195e5ad223",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -477,7 +517,7 @@
                 {
                     "name": "MiddleClick",
                     "type": "PassThrough",
-                    "id": "cda1fc81-cfa5-4053-bc6a-7c9d0f7a28b1",
+                    "id": "b64c8ccd-394d-4fa0-806f-898b1c5be1a5",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -486,7 +526,7 @@
                 {
                     "name": "RightClick",
                     "type": "PassThrough",
-                    "id": "1c4667d2-8df4-4e53-af2b-03db71777295",
+                    "id": "5c228a7e-c470-4af2-9079-6da2316c3f70",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -495,7 +535,7 @@
                 {
                     "name": "TrackedDevicePosition",
                     "type": "PassThrough",
-                    "id": "1a3ca570-9931-4095-9f48-1119928eff74",
+                    "id": "177f38e6-3804-4d27-9877-d1616f3f23b0",
                     "expectedControlType": "Vector3",
                     "processors": "",
                     "interactions": "",
@@ -504,7 +544,7 @@
                 {
                     "name": "TrackedDeviceOrientation",
                     "type": "PassThrough",
-                    "id": "36d3c69b-3998-4050-b9ce-1fef5ccc4167",
+                    "id": "a0e51319-5614-47b5-a20c-8a397e70b714",
                     "expectedControlType": "Quaternion",
                     "processors": "",
                     "interactions": "",
