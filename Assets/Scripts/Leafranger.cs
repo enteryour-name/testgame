@@ -5,13 +5,42 @@ using UnityEngine.InputSystem;
 
 public class Leafranger : MonoBehaviour
 {
-
+    public float fastspeed=20f;
+    public float normalspeed = 10f;
     public float rollrate = 20f;
     Rigidbody2D rb;
     Animator animator;
-    public float walkspeed = 10f;
     Vector2 moveInput;
     Touching touching;
+    public float currentspeed
+    {
+        get
+        {
+            if (Canmove)
+            {
+                if (Leafmove && !touching.IsOnWall)
+                {
+                    if (Slide)
+                    {
+                        return fastspeed;
+                    }
+                    else
+                    {
+                        return normalspeed;
+                    }
+
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            else
+            {//move locked
+                return 0;
+            }
+        }
+    }
     [SerializeField]
     private bool _leafmove = false;
     public bool Leafmove
@@ -90,7 +119,7 @@ public class Leafranger : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(moveInput.x * walkspeed, rb.velocity.y);
+        rb.velocity = new Vector2(moveInput.x * currentspeed, rb.velocity.y);
         animator.SetFloat("yvelocity", rb.velocity.y);
     }
     public void OnMove(InputAction.CallbackContext context)
@@ -117,7 +146,7 @@ public class Leafranger : MonoBehaviour
     public void OnJump(InputAction.CallbackContext context)
     {
         //To do check whether it is alive
-        if (context.started && touching.IsGround)
+        if (context.started && touching.IsGround&&Canmove)
         {
             animator.SetTrigger("jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpimpulse);
@@ -306,6 +335,13 @@ public class Leafranger : MonoBehaviour
         else if (context.canceled)
         {
             Slide = false;
+        }
+    }
+    public bool Canmove
+    {
+        get
+        {
+            return animator.GetBool("canmove");
         }
     }
    

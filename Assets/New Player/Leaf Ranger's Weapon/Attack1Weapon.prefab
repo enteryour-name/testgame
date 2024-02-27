@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 8715747545326029496}
   - component: {fileID: 628774021031607128}
   - component: {fileID: 6578774591588151481}
-  - component: {fileID: 6507900992656312977}
-  - component: {fileID: 5460558702991201036}
+  - component: {fileID: 809521265709426977}
   m_Layer: 0
   m_Name: Attack1Weapon
   m_TagString: Untagged
@@ -29,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3220614153541088452}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.6, y: -6.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -121,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 6885bdb9726311d4db884bae6d7c4135, type: 3}
+  m_Actions: {fileID: 0}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -207,7 +206,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &6507900992656312977
+--- !u!114 &809521265709426977
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,47 +215,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3220614153541088452}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39087e3cf802fb646844d5c262b5a7a6, type: 3}
+  m_Script: {fileID: 11500000, guid: f9f43d548573a524a89f84256157b2ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rollrate: 20
-  walkspeed: 10
-  _leafmove: 0
-  _leafisfacingright: 1
-  jumpimpulse: 20
-  _leafattack1: 0
-  Jumped: 0
-  _doublejump: 0
-  _leafattack2: 0
-  _leafattack3: 0
-  _leafattack4: 0
-  _leafattack5: 0
-  _roll: 0
-  _slide: 0
---- !u!50 &5460558702991201036
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3220614153541088452}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
