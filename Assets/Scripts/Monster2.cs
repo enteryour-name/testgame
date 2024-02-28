@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,11 +7,13 @@ using UnityEngine;
 public class Monster2 : MonoBehaviour
 {
     public float walkspeed = 3f;
+    public DitectionZone attackzone;
+    Animator animator;
     Rigidbody2D rb;
     Touching touching;
     public enum WalkableDirection { Right,Left}
     private WalkableDirection _walkDirection;
-    private Vector2 walkDirectionVector;
+    private Vector2 walkDirectionVector=Vector2.right;
 
     public WalkableDirection WalkDirection
     {
@@ -33,17 +36,53 @@ public class Monster2 : MonoBehaviour
         }
         
     }
-    
+    public bool _hastarget = false;
+    public bool Hastarget
+    {
+        get
+        {
+            return _hastarget;
+        }
+        private set 
+        {
+            _hastarget = value;
+            animator.SetBool("hastarget",value);
+        }
+    }
+
     private void Awake()
     {
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         touching = GetComponent<Touching>();
     }
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(walkspeed * Vector2.right.x, rb.velocity.y);
+        if (touching.IsOnWall&&touching.IsGround)
+        {
+            FlipDirection();
+        }
+        if(Canmove)
+        rb.velocity = new Vector2(walkspeed * walkDirectionVector.x, rb.velocity.y);
+        else
+        {
+            rb.velocity = new Vector2(1f * walkDirectionVector.x, rb.velocity.y);
+        }
         
     }
+
+    private void FlipDirection()
+    {
+        if (WalkDirection == WalkableDirection.Right)
+        {
+            WalkDirection = WalkableDirection.Left;
+        }
+        else if(WalkDirection == WalkableDirection.Left)
+        {
+            WalkDirection = WalkableDirection.Right;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +92,13 @@ public class Monster2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Hastarget = attackzone.detectedColiders.Count > 0;
+    }
+    public bool Canmove
+    {
+        get
+        {
+            return animator.GetBool("canmove");
+        }
     }
 }
