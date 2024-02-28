@@ -404,8 +404,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boolname: canmove
-  updateOnState: 0
-  updateOnStateMachine: 1
+  updateOnState: 1
+  updateOnStateMachine: 0
   valueOnEnter: 0
   valueOnExit: 1
 --- !u!114 &-6780467827090425012
@@ -421,8 +421,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boolname: canmove
-  updateOnState: 0
-  updateOnStateMachine: 1
+  updateOnState: 1
+  updateOnStateMachine: 0
   valueOnEnter: 0
   valueOnExit: 1
 --- !u!1101 &-6539969945017557458
@@ -648,8 +648,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boolname: canmove
-  updateOnState: 0
-  updateOnStateMachine: 1
+  updateOnState: 1
+  updateOnStateMachine: 0
   valueOnEnter: 0
   valueOnExit: 1
 --- !u!1101 &-5198249192818616096
@@ -703,7 +703,7 @@ AnimatorStateMachine:
     m_Position: {x: 10, y: 260, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6223338466499683847}
-    m_Position: {x: 80, y: 430, z: 0}
+    m_Position: {x: 50, y: 420, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6210101692946301769}
     m_Position: {x: 370, y: 440, z: 0}
@@ -1115,7 +1115,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 0.7916667
+  m_ExitTime: 0.8
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1236,85 +1236,85 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: leafattack2
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: leafattack3
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: leafattack4
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: leafattack5
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: yvelocity
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: jump
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: leafmove
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: roll
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isground
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: doublejump
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: jumped
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: slide
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: canmove
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 1
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -1955,7 +1955,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 0.7916667
+  m_ExitTime: 0.8
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -2025,8 +2025,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boolname: canmove
-  updateOnState: 0
-  updateOnStateMachine: 1
+  updateOnState: 1
+  updateOnStateMachine: 0
   valueOnEnter: 0
   valueOnExit: 1
 --- !u!1102 &5413027267320791927

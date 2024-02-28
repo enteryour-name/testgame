@@ -41,6 +41,29 @@ public class Firecontrol : MonoBehaviour
             _fireisfacingright = value;
         }
     }
+    public float currentspeed
+    {
+        get
+        {
+            if (Canmove)
+            {
+                if (Firemove && !touching.IsOnWall)
+                {
+                    return walkspeed;
+                    
+
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            else
+            {//move locked
+                return 0;
+            }
+        }
+    }
     public bool _fireattack2 = false;
     public float jumpimpulse=20f;
 
@@ -78,7 +101,7 @@ public class Firecontrol : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(moveInput.x * walkspeed, rb.velocity.y);
+        rb.velocity = new Vector2(moveInput.x * currentspeed, rb.velocity.y);
         animator.SetFloat("yvelocity", rb.velocity.y);
     }
     public void OnMove(InputAction.CallbackContext context)
@@ -119,7 +142,7 @@ public class Firecontrol : MonoBehaviour
     public void OnJump(InputAction.CallbackContext context)
     {
         //To do check whether it is alive
-        if(context.started && touching.IsGround)
+        if(context.started && touching.IsGround&&Canmove)
         {
             animator.SetTrigger("jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpimpulse);
@@ -285,4 +308,12 @@ public class Firecontrol : MonoBehaviour
             Roll = false;
         }
     }
+    public bool Canmove
+    {
+        get
+        {
+            return animator.GetBool("canmove");
+        }
+    }
+
 }

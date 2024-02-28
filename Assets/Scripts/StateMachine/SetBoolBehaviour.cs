@@ -7,7 +7,7 @@ public class SetBoolBehaviour : StateMachineBehaviour
     public string boolname;
     public bool updateOnState;
     public bool updateOnStateMachine;
-    public bool valueOnEnter,valueOnExit;
+    public bool valueOnEnter=false,valueOnExit=true;
 
     // OnStateEnter is called before OnStateEnter is called on any state inside this state machine
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -29,7 +29,7 @@ public class SetBoolBehaviour : StateMachineBehaviour
     {
         if (updateOnState)
         {
-            animator.SetBool(boolname, valueOnEnter);
+            animator.SetBool(boolname, valueOnExit);
         }
     }
 
