@@ -200,7 +200,11 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   groundDistance: 0.05
+  wallDistance: 0.2
+  ceilingDistance: 0.05
   _isground: 0
+  _isonwall: 0
+  _isonceiling: 0
 --- !u!114 &1976969763877769329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,8 +217,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39087e3cf802fb646844d5c262b5a7a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fastspeed: 20
+  normalspeed: 10
   rollrate: 20
-  walkspeed: 10
   _leafmove: 0
   _leafisfacingright: 1
   jumpimpulse: 20
@@ -460,6 +465,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 3cf53b44-59b0-4725-8fd3-dd75e30ba191
     m_ActionName: Player/Speedup[/Keyboard/l]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8f80275e-87e4-4ffc-af42-1f0eeacf35c0
+    m_ActionName: Player/Attack3Weapon[/Keyboard/u]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
