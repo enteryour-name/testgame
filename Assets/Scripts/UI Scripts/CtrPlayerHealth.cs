@@ -7,7 +7,7 @@ public class CtrPlayerHealth : MonoBehaviour
 {
     // Start is called before the first frame update
     public float maxHealth;
-    private float health;
+    public float health;
     public GameObject healthbarobj;
     private RectTransform rtr;
     public GameObject TargetText;
@@ -31,7 +31,7 @@ public class CtrPlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DecreaseHealth();  
+        DecreaseHealth();
         rtr.localScale= new (health / maxHealth,1f,1f);
         HealthBartext.text = $"{health:f0}/{maxHealth:f0}";
     }
