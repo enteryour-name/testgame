@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2920366836815462069}
   - component: {fileID: 1976969763877769329}
   - component: {fileID: 781514458470251130}
+  - component: {fileID: 3221350175786084848}
   m_Layer: 0
   m_Name: Elementals_leaf_ranger_288x128_SpriteSheet_0
   m_TagString: Untagged
@@ -474,3 +475,19 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &3221350175786084848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9056845513384046710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0282e339b3054234a8f0bf77e31de671, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxhealth: 100
+  _health: 100
+  _isalive: 1
+  isInvincible: 0
