@@ -37,5 +37,10 @@ public class Attack3weapon : MonoBehaviour
             animator.SetTrigger("leafattack3weapon");
             
         }
+        if (leafranger != null && leafranger.Leafattack4 && touching.IsGround)
+        {
+            animator.SetTrigger("leafattack4weapon");
+
+        }
     }
 }
