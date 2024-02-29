@@ -73,7 +73,7 @@ public class Firecontrol : MonoBehaviour
         {
             return _fireattack2;
         }
-        private set
+       set
         {
             _fireattack2 = value;
             animator.SetBool("fireattack2", value);
@@ -158,7 +158,7 @@ public class Firecontrol : MonoBehaviour
         {
             return _doublejump;
         }
-        private set
+        set
         {
             _doublejump = value;
             animator.SetBool("doublejump", value);
@@ -192,7 +192,7 @@ public class Firecontrol : MonoBehaviour
         {
             return _fireattack1;
         }
-        private set
+       set
         {
             _fireattack1 = value;
             animator.SetBool("fireattack1", value);
@@ -216,7 +216,7 @@ public class Firecontrol : MonoBehaviour
         {
             return _fireattack3;
         }
-        private set
+        set
         {
             _fireattack3 = value;
             animator.SetBool("fireattack3", value);
@@ -240,7 +240,7 @@ public class Firecontrol : MonoBehaviour
         {
             return _fireattack4;
         }
-        private set
+         set
         {
             _fireattack4 = value;
             animator.SetBool("fireattack4", value);
@@ -264,7 +264,7 @@ public class Firecontrol : MonoBehaviour
         {
             return _fireattack5;
         }
-        private set
+        set
         {
             _fireattack5 = value;
             animator.SetBool("fireattack5", value);
