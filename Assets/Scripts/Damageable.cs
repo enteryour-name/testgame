@@ -39,7 +39,7 @@ public class Damageable : MonoBehaviour
     public bool _isalive = true;
    public bool isInvincible=false;
     private float timesincehit=0;
-    private float invincibilityTimer=0.25f;
+    public float invincibilityTimer=0.25f;
 
     public bool Isalive
     {
