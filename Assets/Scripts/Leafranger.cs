@@ -12,6 +12,7 @@ public class Leafranger : MonoBehaviour
     Animator animator;
     Vector2 moveInput;
     Touching touching;
+    Damageable damageable;
     
     public float currentspeed
     {
@@ -103,6 +104,7 @@ public class Leafranger : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         touching = GetComponent<Touching>();
+        damageable=GetComponent<Damageable>();
        
     }
 
@@ -119,18 +121,10 @@ public class Leafranger : MonoBehaviour
     {
         
     }
-    public bool Lockvelocity { get
-        {
-           return animator.GetBool("lockvelocity");
-        }
-        set
-        {
-            animator.SetBool("lockvelocity", value);
-        }
-    }
+    
     private void FixedUpdate()
     {
-        if(!Lockvelocity)
+        if(!damageable.Lockvelocity)
         rb.velocity = new Vector2(moveInput.x * currentspeed, rb.velocity.y);
         animator.SetFloat("yvelocity", rb.velocity.y);
     }
@@ -222,11 +216,12 @@ public class Leafranger : MonoBehaviour
         if (context.started&& touching.IsGround)
         {
             Leafattack2 = true;
+            
         }
         else if (context.canceled)
         {
             Leafattack2 = false;
-            Leafmove = false;
+           
         }
     }
     public bool _leafattack3;
@@ -248,6 +243,7 @@ public class Leafranger : MonoBehaviour
         if (context.started)
         {
             Leafattack3 = true;
+            
         }
         else if (context.canceled)
         {
@@ -273,6 +269,7 @@ public class Leafranger : MonoBehaviour
         if (context.started)
         {
             Leafattack4 = true;
+          
         }
         else if (context.canceled)
         {
@@ -297,6 +294,7 @@ public class Leafranger : MonoBehaviour
         if (context.started)
         {
             Leafattack5 = true;
+          
         }
         else if (context.canceled)
         {
@@ -376,7 +374,7 @@ public class Leafranger : MonoBehaviour
 
     public void OnHit(int damage,Vector2 knockback)
     {
-        Lockvelocity = true;
+        
         rb.velocity=new Vector2(knockback.x,rb.velocity.y+ knockback.y);
     }
    

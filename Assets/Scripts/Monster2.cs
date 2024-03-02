@@ -3,14 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D),typeof(Touching))]
+[RequireComponent(typeof(Rigidbody2D),typeof(Touching),typeof(Damageable))]
 public class Monster2 : MonoBehaviour
 {
     public float walkspeed = 3f;
     public DitectionZone attackzone;
+    public DitectionZone cliffditectionzone;
     Animator animator;
     Rigidbody2D rb;
     Touching touching;
+    Damageable damageable;
     public enum WalkableDirection { Right,Left}
     private WalkableDirection _walkDirection;
     private Vector2 walkDirectionVector=Vector2.right;
@@ -55,18 +57,22 @@ public class Monster2 : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         touching = GetComponent<Touching>();
+        damageable=GetComponent<Damageable>();
     }
     private void FixedUpdate()
     {
-        if (touching.IsOnWall&&touching.IsGround)
+        if (touching.IsOnWall&&touching.IsGround||cliffditectionzone.detectedColiders.Count==0)
         {
             FlipDirection();
         }
-        if(Canmove)
-        rb.velocity = new Vector2(walkspeed * walkDirectionVector.x, rb.velocity.y);
-        else
+        if (!damageable.Lockvelocity)
         {
-            rb.velocity = new Vector2(1f * walkDirectionVector.x, rb.velocity.y);
+            if (Canmove)
+                rb.velocity = new Vector2(walkspeed * walkDirectionVector.x, rb.velocity.y);
+            else
+            {
+                rb.velocity = new Vector2(1f * walkDirectionVector.x, rb.velocity.y);
+            }
         }
         
     }
@@ -93,12 +99,32 @@ public class Monster2 : MonoBehaviour
     void Update()
     {
         Hastarget = attackzone.detectedColiders.Count > 0;
+        if (Attackcooldown > 0)
+        {
+            Attackcooldown -= Time.deltaTime;
+        }
+        
+        
     }
+    public float Attackcooldown { get 
+        {
+            return animator.GetFloat("attackcooldown");
+        } private set {
+            animator.SetFloat("attackcooldown", Mathf.Max(value,0));
+        } }
     public bool Canmove
     {
         get
         {
             return animator.GetBool("canmove");
         }
+    }
+
+   
+
+    public void OnHit(int damage, Vector2 knockback)
+    {
+       
+        rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
     }
 }
