@@ -66,7 +66,7 @@ public class Monster2 : MonoBehaviour
         rb.velocity = new Vector2(walkspeed * walkDirectionVector.x, rb.velocity.y);
         else
         {
-            rb.velocity = new Vector2(0 * walkDirectionVector.x, rb.velocity.y);
+            rb.velocity = new Vector2(1f * walkDirectionVector.x, rb.velocity.y);
         }
         
     }

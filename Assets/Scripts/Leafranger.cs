@@ -12,6 +12,7 @@ public class Leafranger : MonoBehaviour
     Animator animator;
     Vector2 moveInput;
     Touching touching;
+    
     public float currentspeed
     {
         get
@@ -102,6 +103,7 @@ public class Leafranger : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         touching = GetComponent<Touching>();
+       
     }
 
     // Start is called before the first frame update
@@ -117,16 +119,33 @@ public class Leafranger : MonoBehaviour
     {
         
     }
+    public bool Lockvelocity { get
+        {
+           return animator.GetBool("lockvelocity");
+        }
+        set
+        {
+            animator.SetBool("lockvelocity", value);
+        }
+    }
     private void FixedUpdate()
     {
+        if(!Lockvelocity)
         rb.velocity = new Vector2(moveInput.x * currentspeed, rb.velocity.y);
         animator.SetFloat("yvelocity", rb.velocity.y);
     }
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
-        Leafmove = moveInput != Vector2.zero;
-        SetFacingDirection(moveInput);
+        if (Isalive)
+        {
+            Leafmove = moveInput != Vector2.zero;
+            SetFacingDirection(moveInput);
+        }
+        else
+        {
+            Leafmove = false;
+        }
     }
 
     private void SetFacingDirection(Vector2 moveInput)
@@ -207,6 +226,7 @@ public class Leafranger : MonoBehaviour
         else if (context.canceled)
         {
             Leafattack2 = false;
+            Leafmove = false;
         }
     }
     public bool _leafattack3;
@@ -343,6 +363,21 @@ public class Leafranger : MonoBehaviour
         {
             return animator.GetBool("canmove");
         }
+    }
+    public bool Isalive
+    {
+        get
+        {
+            return animator.GetBool("isalive");
+        }
+    }
+
+   
+
+    public void OnHit(int damage,Vector2 knockback)
+    {
+        Lockvelocity = true;
+        rb.velocity=new Vector2(knockback.x,rb.velocity.y+ knockback.y);
     }
    
 }

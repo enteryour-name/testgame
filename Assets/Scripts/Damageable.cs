@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Damageable : MonoBehaviour
 {
-    
+    public UnityEvent<int, Vector2> damageableHit;
     Animator animator;
     public float _maxhealth=100;
     public float Maxhealth
@@ -38,8 +39,11 @@ public class Damageable : MonoBehaviour
     
     public bool _isalive = true;
    public bool isInvincible=false;
+
+   
+
     private float timesincehit=0;
-    private float invincibilityTimer=0.25f;
+    public float invincibilityTimer=0.25f;
 
     public bool Isalive
     {
@@ -77,15 +81,19 @@ public class Damageable : MonoBehaviour
             }
             timesincehit += Time.deltaTime;
         }
-        Hit(10);
+       
         
     }
-    public void Hit(int damage)
+    public bool Hit(int damage,Vector2 knockback)
     {
         if (Isalive && !isInvincible)
         {
             Health -= damage;
             isInvincible = true;
+            animator.SetTrigger("hit");
+            damageableHit?.Invoke(damage, knockback);
+            return true;
         }
+        return false;
     }
 }

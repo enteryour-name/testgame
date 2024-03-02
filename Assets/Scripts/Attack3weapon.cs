@@ -32,12 +32,12 @@ public class Attack3weapon : MonoBehaviour
         touching = transform.parent.GetComponent<Touching>();
         animator = GetComponent<Animator>();
         leafranger = transform.parent.GetComponent<Leafranger>();
-        if (leafranger!=null && leafranger.Leafattack3&&touching.IsGround)
+        if (leafranger!=null && leafranger.Leafattack3&&touching.IsGround&&leafranger.Isalive)
         {
             animator.SetTrigger("leafattack3weapon");
             
         }
-        if (leafranger != null && leafranger.Leafattack4 && touching.IsGround)
+        if (leafranger!=null && leafranger.Leafattack4&&touching.IsGround)
         {
             animator.SetTrigger("leafattack4weapon");
 
