@@ -28,7 +28,8 @@ public class Monster2Attack : MonoBehaviour
         Damageable damageable = collision.GetComponent<Damageable>();
         if(damageable!= null )
         {
-           bool gotHit= damageable.Hit(attackDamage,knockback);
+            Vector2 deliveredknockback = transform.parent.localScale.x > 0?knockback:new Vector2(-knockback.x,knockback.y);
+           bool gotHit= damageable.Hit(attackDamage,deliveredknockback);
             if(gotHit)
             {
                 Debug.Log(collision.name+"hit for"+attackDamage);

@@ -8,6 +8,7 @@ public class Monster2 : MonoBehaviour
 {
     public float walkspeed = 3f;
     public DitectionZone attackzone;
+    public DitectionZone cliffditectionzone;
     Animator animator;
     Rigidbody2D rb;
     Touching touching;
@@ -60,7 +61,7 @@ public class Monster2 : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (touching.IsOnWall&&touching.IsGround)
+        if (touching.IsOnWall&&touching.IsGround||cliffditectionzone.detectedColiders.Count==0)
         {
             FlipDirection();
         }
@@ -98,7 +99,19 @@ public class Monster2 : MonoBehaviour
     void Update()
     {
         Hastarget = attackzone.detectedColiders.Count > 0;
+        if (Attackcooldown > 0)
+        {
+            Attackcooldown -= Time.deltaTime;
+        }
+        
+        
     }
+    public float Attackcooldown { get 
+        {
+            return animator.GetFloat("attackcooldown");
+        } private set {
+            animator.SetFloat("attackcooldown", Mathf.Max(value,0));
+        } }
     public bool Canmove
     {
         get
@@ -106,7 +119,9 @@ public class Monster2 : MonoBehaviour
             return animator.GetBool("canmove");
         }
     }
-    
+
+   
+
     public void OnHit(int damage, Vector2 knockback)
     {
        

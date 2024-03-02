@@ -216,11 +216,12 @@ public class Leafranger : MonoBehaviour
         if (context.started&& touching.IsGround)
         {
             Leafattack2 = true;
+            
         }
         else if (context.canceled)
         {
             Leafattack2 = false;
-            Leafmove = false;
+           
         }
     }
     public bool _leafattack3;
@@ -242,6 +243,7 @@ public class Leafranger : MonoBehaviour
         if (context.started)
         {
             Leafattack3 = true;
+            
         }
         else if (context.canceled)
         {
@@ -267,6 +269,7 @@ public class Leafranger : MonoBehaviour
         if (context.started)
         {
             Leafattack4 = true;
+          
         }
         else if (context.canceled)
         {
@@ -291,6 +294,7 @@ public class Leafranger : MonoBehaviour
         if (context.started)
         {
             Leafattack5 = true;
+          
         }
         else if (context.canceled)
         {
