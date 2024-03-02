@@ -11,6 +11,7 @@ public class Firecontrol : MonoBehaviour
     public float walkspeed = 10f;
     Vector2 moveInput;
     Touching touching;
+    
     [SerializeField]
     private bool _firemove = false;
     public bool Firemove
@@ -84,6 +85,7 @@ public class Firecontrol : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         touching = GetComponent<Touching>();
+        
     }
 
     // Start is called before the first frame update
@@ -99,8 +101,20 @@ public class Firecontrol : MonoBehaviour
     {
         
     }
+    public bool Lockvelocity
+    {
+        get
+        {
+            return animator.GetBool("lockvelocity");
+        }
+        set
+        {
+            animator.SetBool("lockvelocity", value);
+        }
+    }
     private void FixedUpdate()
     {
+        if(!Lockvelocity)
         rb.velocity = new Vector2(moveInput.x * currentspeed, rb.velocity.y);
         animator.SetFloat("yvelocity", rb.velocity.y);
     }
@@ -315,5 +329,18 @@ public class Firecontrol : MonoBehaviour
             return animator.GetBool("canmove");
         }
     }
+    public bool Isalive
+    {
+        get
+        {
+            return animator.GetBool("isalive");
+        }
+    }
+    public void OnHit(int damage, Vector2 knockback)
+    {
+        Lockvelocity = true;
+        rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
+    }
+
 
 }

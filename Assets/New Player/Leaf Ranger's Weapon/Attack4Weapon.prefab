@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5459198234938240475}
   - component: {fileID: 4054105335363168818}
   - component: {fileID: 8139698194815565713}
-  - component: {fileID: 2246564136224466161}
-  m_Layer: 0
+  - component: {fileID: 2167882773134292352}
+  m_Layer: 7
   m_Name: Attack4Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &2246564136224466161
+--- !u!114 &2167882773134292352
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
