@@ -29,8 +29,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Speed: 1.2566371
-    - _StartTime: 14.940317
+    - _Speed: 3.1415927
+    - _StartTime: 2.8330822
     m_Colors:
-    - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 0.7294118}
   m_BuildTextureStacks: []

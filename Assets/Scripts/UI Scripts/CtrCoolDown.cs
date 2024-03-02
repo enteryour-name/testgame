@@ -11,23 +11,30 @@ public class CtrCoolDown : MonoBehaviour
     public CanvasRenderer cr;
     public float CoolDownTime;
     Firecontrol firecontrol;
+    private bool iscooldown = false;
     // Start is called before the first frame update
     void Start()
     {
         cr = GetComponent<CanvasRenderer>();
-        firecontrol = GetComponent<Firecontrol>();
+        firecontrol = GameObject.FindObjectOfType<Firecontrol>().GetComponent<Firecontrol>();
+        cr.SetMaterial(NormalStage,null);
     }
     IEnumerator WaitForSeconds(float time)
     {
+        iscooldown = true;
         yield return new WaitForSeconds(time);
         cr.SetMaterial(NormalStage, null);
+        iscooldown = false;
     }
     private void IntoCoolDown()
     {
-        cr.SetMaterial(CooldownStage, null);
-        CooldownStage.SetFloat("_Speed", (float)Math.PI * 2 / CoolDownTime);
-        CooldownStage.SetFloat("_StartTime", Time.time);
-        StartCoroutine(WaitForSeconds(CoolDownTime));
+        if (!iscooldown)
+        {
+            cr.SetMaterial(CooldownStage, null);
+            CooldownStage.SetFloat("_Speed", (float)Math.PI * 2 / CoolDownTime);
+            CooldownStage.SetFloat("_StartTime", Time.time);
+            StartCoroutine(WaitForSeconds(CoolDownTime));
+        }
     }
 
     // Update is called once per frame
