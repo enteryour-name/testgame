@@ -103,28 +103,25 @@ public class Firecontrol : MonoBehaviour
     {
         
     }
-    public bool Lockvelocity
-    {
-        get
-        {
-            return animator.GetBool("lockvelocity");
-        }
-        set
-        {
-            animator.SetBool("lockvelocity", value);
-        }
-    }
+   
     private void FixedUpdate()
     {
-        if(!Lockvelocity)
+        if(!damageable.Lockvelocity)
         rb.velocity = new Vector2(moveInput.x * currentspeed, rb.velocity.y);
         animator.SetFloat("yvelocity", rb.velocity.y);
     }
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
-        Firemove = moveInput != Vector2.zero;
-        SetFacingDirection(moveInput);
+        if (Isalive)
+        {
+            Firemove = moveInput != Vector2.zero;
+            SetFacingDirection(moveInput);
+        }
+        else
+        {
+            Firemove = false;
+        }
     }
 
     private void SetFacingDirection(Vector2 moveInput)
@@ -340,7 +337,7 @@ public class Firecontrol : MonoBehaviour
     }
     public void OnHit(int damage, Vector2 knockback)
     {
-        Lockvelocity = true;
+        
         rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
     }
 
