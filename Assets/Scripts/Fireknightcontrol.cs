@@ -11,6 +11,7 @@ public class Firecontrol : MonoBehaviour
     public float walkspeed = 10f;
     Vector2 moveInput;
     Touching touching;
+    Damageable damageable;
     
     [SerializeField]
     private bool _firemove = false;
@@ -85,6 +86,7 @@ public class Firecontrol : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         touching = GetComponent<Touching>();
+        damageable=GetComponent<Damageable>();
         
     }
 
