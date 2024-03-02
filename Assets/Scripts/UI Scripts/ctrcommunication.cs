@@ -13,7 +13,6 @@ public class ctrcommunication : MonoBehaviour
         {
             Debug.Log("error");
         }
-        Debug.Log("hello" +  commu.character);
     }
     void Start()
     {

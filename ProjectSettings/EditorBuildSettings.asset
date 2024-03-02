@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainPage.unity
     guid: d2e9b7cfaa951da4495e1092c36b389f
+  - enabled: 1
+    path: Assets/Scenes/First round.unity
+    guid: 36fa6acc7ba6ef64b9898ff7e3170726
+  - enabled: 1
+    path: Assets/cataclysm.unity
+    guid: fbbe93a55fd5a4a4f947419f8a54eca1
   m_configObjects: {}
