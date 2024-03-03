@@ -12,13 +12,20 @@ public class CtrPlayerHealth : MonoBehaviour
     private RectTransform rtr;
     public GameObject TargetText;
     private TextMeshProUGUI HealthBartext;
+    Damageable damageable;
     private void Refresh()
     {
+        damageable = GetComponent<Damageable>();
+        maxHealth = damageable.Maxhealth;
         health = maxHealth;
     }
     private void DecreaseHealth()
     {
         health = maxHealth - Time.time;
+    }
+    private void GetHealth()
+    {
+        health = damageable.Health;
     }
     void Start()
     {
@@ -31,7 +38,7 @@ public class CtrPlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DecreaseHealth();
+        GetHealth();
         rtr.localScale= new (health / maxHealth,1f,1f);
         HealthBartext.text = $"{health:f0}/{maxHealth:f0}";
     }
