@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -66,7 +67,7 @@ public class Leafranger : MonoBehaviour
         }
         private set
         {
-            if (_leafisfacingright != value)
+            if (_leafisfacingright != value&&!Leafattack2&&!Leafattack3&&!Leafattack4&&!Leafattack5)
             {
                 transform.localScale *= new Vector2(-1, 1);
             }
@@ -93,10 +94,12 @@ public class Leafranger : MonoBehaviour
         if (context.started&& !touching.IsGround)
         {
             Leafattack1 = true;
+           
         }
         else if (context.canceled)
         {
             Leafattack1 = false;
+           
         }
     }
     private void Awake()
@@ -131,7 +134,22 @@ public class Leafranger : MonoBehaviour
         {
             Attack5cooldown -= Time.deltaTime;
         }
-        
+        if (rb.velocity.x==0)
+        {
+            Attacktime-=Time.deltaTime;
+            transform.rotation = Quaternion.identity;
+        }
+    }
+    public float Attacktime
+    {
+        get
+        {
+            return animator.GetFloat("attacktime");
+        }
+        private set
+        {
+            animator.SetFloat("attacktime", Mathf.Max(value, 0));
+        }
     }
     public float Attack3cooldown
     {
@@ -178,15 +196,19 @@ public class Leafranger : MonoBehaviour
         moveInput = context.ReadValue<Vector2>();
         if (Isalive)
         {
-            Leafmove = moveInput != Vector2.zero;
-            SetFacingDirection(moveInput);
+            
+                Leafmove = moveInput != Vector2.zero;
+                SetFacingDirection(moveInput);
+            
         }
         else
         {
             Leafmove = false;
         }
+       
+        
     }
-
+    
     private void SetFacingDirection(Vector2 moveInput)
     {
         if (moveInput.x > 0 && !Leafisfacingright)
@@ -243,6 +265,7 @@ public class Leafranger : MonoBehaviour
         }
 
     }
+   
     public bool _leafattack2;
     public bool Leafattack2
     {
@@ -256,16 +279,19 @@ public class Leafranger : MonoBehaviour
             animator.SetBool("leafattack2", value);
         }
     }
+    
     public void OnLeafattack2(InputAction.CallbackContext context)
     {
         if (context.started&& touching.IsGround)
         {
             Leafattack2 = true;
-            
+         
+
         }
         else if (context.canceled)
         {
             Leafattack2 = false;
+            
            
         }
     }
@@ -288,7 +314,7 @@ public class Leafranger : MonoBehaviour
         if (context.started)
         {
             Leafattack3 = true;
-            
+          
         }
         else if (context.canceled)
         {
@@ -314,7 +340,7 @@ public class Leafranger : MonoBehaviour
         if (context.started)
         {
             Leafattack4 = true;
-          
+            
         }
         else if (context.canceled)
         {
@@ -339,7 +365,7 @@ public class Leafranger : MonoBehaviour
         if (context.started)
         {
             Leafattack5 = true;
-          
+            
         }
         else if (context.canceled)
         {
