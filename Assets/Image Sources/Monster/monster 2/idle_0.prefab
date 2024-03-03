@@ -118,7 +118,7 @@ Transform:
   m_GameObject: {fileID: 7007110616236748067}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -170,7 +170,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.309745, y: -0.20748892}
+  m_Offset: {x: 0.88271236, y: -0.20748892}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -181,7 +181,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.1014416, y: 0.9999998}
+  m_Size: {x: 2.9555068, y: 0.9999998}
   m_EdgeRadius: 0
 --- !u!1 &7070404986079621453
 GameObject:
@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 2057049361468484569}
   - component: {fileID: 3095978069053751379}
   - component: {fileID: 5877071200790391274}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: idle_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,7 +216,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.9, y: 5.29, z: 0}
-  m_LocalScale: {x: 1.5698575, y: 1.6839681, z: 1}
+  m_LocalScale: {x: 1.0842063, y: 1.1630156, z: 0.69064}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8159478804267233831}
@@ -373,14 +373,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   castFilter:
     useTriggers: 0
-    useLayerMask: 0
+    useLayerMask: 1
     useDepth: 0
     useOutsideDepth: 0
     useNormalAngle: 0
     useOutsideNormalAngle: 0
     layerMask:
       serializedVersion: 2
-      m_Bits: 0
+      m_Bits: 64
     minDepth: 0
     maxDepth: 0
     minNormalAngle: 0
@@ -404,7 +404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkspeed: 3
-  attackzone: {fileID: 0}
+  attackzone: {fileID: 5833465095965849870}
   cliffditectionzone: {fileID: 4820359035905188908}
   _hastarget: 0
 --- !u!114 &5877071200790391274
@@ -421,7 +421,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageableHit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3095978069053751379}
+        m_TargetAssemblyTypeName: Monster2, Assembly-CSharp
+        m_MethodName: OnHit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _maxhealth: 100
   _health: 100
   _isalive: 1
@@ -454,7 +466,7 @@ Transform:
   m_GameObject: {fileID: 8367995513702700534}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.22, y: -0.25, z: 0}
+  m_LocalPosition: {x: 1.37, y: -0.19, z: 0}
   m_LocalScale: {x: 2.630355, y: 1.1193, z: 1.1193}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -492,7 +504,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.069577634, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -503,7 +515,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.86084473, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &5833465095965849870
 MonoBehaviour:

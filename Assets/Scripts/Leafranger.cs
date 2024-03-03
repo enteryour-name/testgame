@@ -134,23 +134,9 @@ public class Leafranger : MonoBehaviour
         {
             Attack5cooldown -= Time.deltaTime;
         }
-        if (rb.velocity.x==0)
-        {
-            Attacktime-=Time.deltaTime;
-            transform.rotation = Quaternion.identity;
-        }
+        
     }
-    public float Attacktime
-    {
-        get
-        {
-            return animator.GetFloat("attacktime");
-        }
-        private set
-        {
-            animator.SetFloat("attacktime", Mathf.Max(value, 0));
-        }
-    }
+    
     public float Attack3cooldown
     {
         get

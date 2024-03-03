@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3d282bcd5e0c64298b5f6e9fb76516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 20
+  attackDamage: 15
   knockback: {x: 2, y: 2}
 --- !u!61 &7635088809837830999
 BoxCollider2D:
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3d282bcd5e0c64298b5f6e9fb76516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 30
+  attackDamage: 20
   knockback: {x: 2, y: 2}
 --- !u!1 &5305705027770941632
 GameObject:
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3d282bcd5e0c64298b5f6e9fb76516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 40
+  attackDamage: 25
   knockback: {x: 3, y: 2}
 --- !u!61 &2387988180316418011
 BoxCollider2D:
@@ -1180,7 +1180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3821655346367605869, guid: f6bdc4c328464b8409806d74c3016599, type: 3}
       propertyPath: attackDamage
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6001814895879841810, guid: f6bdc4c328464b8409806d74c3016599, type: 3}
       propertyPath: m_LocalPosition.x

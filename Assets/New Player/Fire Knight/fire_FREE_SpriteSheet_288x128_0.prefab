@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3d282bcd5e0c64298b5f6e9fb76516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 10
+  attackDamage: 15
   knockback: {x: 2, y: 2}
 --- !u!60 &1041958706758806077
 PolygonCollider2D:
@@ -793,7 +793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3d282bcd5e0c64298b5f6e9fb76516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 15
+  attackDamage: 20
   knockback: {x: 3, y: 3}
 --- !u!1 &7682996101810871123
 GameObject:
@@ -835,7 +835,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7682996101810871123}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -885,7 +885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3d282bcd5e0c64298b5f6e9fb76516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 10
+  attackDamage: 15
   knockback: {x: 0, y: 0}
 --- !u!1 &7749392330683546448
 GameObject:
@@ -932,7 +932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3d282bcd5e0c64298b5f6e9fb76516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 20
+  attackDamage: 30
   knockback: {x: 0, y: 0}
 --- !u!70 &3015826241288058206
 CapsuleCollider2D:
