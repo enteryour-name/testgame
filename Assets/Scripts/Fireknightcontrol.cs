@@ -101,9 +101,53 @@ public class Firecontrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Attack3cooldown > 0)
+        {
+            Attack3cooldown -= Time.deltaTime;
+        }
+        if (Attack4cooldown > 0)
+        {
+            Attack4cooldown -= Time.deltaTime;
+        }
+        if (Attack5cooldown > 0)
+        {
+            Attack5cooldown -= Time.deltaTime;
+        }
     }
-   
+    public float Attack3cooldown
+    {
+        get
+        {
+            return animator.GetFloat("attack3cooldown");
+        }
+        private set
+        {
+            animator.SetFloat("attack3cooldown", Mathf.Max(value, 0));
+        }
+    }
+    public float Attack4cooldown
+    {
+        get
+        {
+            return animator.GetFloat("attack4cooldown");
+        }
+        private set
+        {
+            animator.SetFloat("attack4cooldown", Mathf.Max(value, 0));
+        }
+    }
+    public float Attack5cooldown
+    {
+        get
+        {
+            return animator.GetFloat("attack5cooldown");
+        }
+        private set
+        {
+            animator.SetFloat("attack5cooldown", Mathf.Max(value, 0));
+        }
+    }
+
     private void FixedUpdate()
     {
         if(!damageable.Lockvelocity)
