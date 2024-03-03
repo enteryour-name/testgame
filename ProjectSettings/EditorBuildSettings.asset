@@ -5,19 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/characterchoosing.unity
     guid: f588618a69355cc45ab54f5e72d7524c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainPage.unity
     guid: d2e9b7cfaa951da4495e1092c36b389f
   - enabled: 1
+<<<<<<< HEAD
+<<<<<<< HEAD
     path: Assets/Scenes/First round.unity
     guid: 36fa6acc7ba6ef64b9898ff7e3170726
   - enabled: 1
+=======
+>>>>>>> e763b72dfb25f0ee057a4c81fd7e0432721efa12
+=======
+>>>>>>> e763b72dfb25f0ee057a4c81fd7e0432721efa12
     path: Assets/cataclysm.unity
     guid: fbbe93a55fd5a4a4f947419f8a54eca1
   m_configObjects: {}
