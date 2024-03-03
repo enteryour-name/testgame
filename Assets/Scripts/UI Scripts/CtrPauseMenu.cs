@@ -13,7 +13,6 @@ public class CtrPauseMenu : MonoBehaviour
     void Start()
     {
         pausemenu.SetActive(false);
-        Debug.Log("Start!");
     }
     void ChangePauseMenu()
     {

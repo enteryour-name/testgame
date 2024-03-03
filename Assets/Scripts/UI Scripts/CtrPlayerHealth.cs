@@ -18,6 +18,14 @@ public class CtrPlayerHealth : MonoBehaviour
         damageable = GetComponent<Damageable>();
         maxHealth = damageable.Maxhealth;
         health = maxHealth;
+        if(healthbarobj == null)
+        {
+            healthbarobj = GameObject.Find("HealthBarin");
+        }
+        if(TargetText == null) 
+        {
+            TargetText = GameObject.Find("HealthBarText");
+        }
     }
     private void DecreaseHealth()
     {

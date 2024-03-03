@@ -12,6 +12,17 @@ public class CtrCoolDown : MonoBehaviour
     public float CoolDownTime;
     Firecontrol firecontrol;
     private bool iscooldown = false;
+    public float skill = 5;
+    private bool isskill(float skillnumber)
+    {
+        switch (skillnumber)
+        {
+            case 3: return firecontrol.Fireattack3;
+            case 4: return firecontrol.Fireattack4;
+            case 5:return firecontrol.Fireattack5;
+            default: return false;
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +51,7 @@ public class CtrCoolDown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(firecontrol.Fireattack5) 
+        if(isskill(skill)) 
         {
             IntoCoolDown();
         }
