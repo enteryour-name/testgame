@@ -29,18 +29,16 @@ public class Attack3weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         touching = transform.parent.GetComponent<Touching>();
         animator = GetComponent<Animator>();
         leafranger = transform.parent.GetComponent<Leafranger>();
-        if (leafranger!=null && leafranger.Leafattack3&&touching.IsGround&&leafranger.Isalive)
+        if (leafranger!=null && leafranger.Leafattack3&&touching.IsGround&&leafranger.Isalive&&leafranger.Attack3cooldown==0)
         {
             animator.SetTrigger("leafattack3weapon");
             
         }
-        if (leafranger!=null && leafranger.Leafattack4&&touching.IsGround&&leafranger.Isalive)
-        {
-            animator.SetTrigger("leafattack4weapon");
 
-        }
+       
     }
 }

@@ -19,7 +19,7 @@ public class Attack4weapon : MonoBehaviour
 
 
     }
-
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -29,14 +29,17 @@ public class Attack4weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         touching = transform.parent.GetComponent<Touching>();
         animator = GetComponent<Animator>();
         leafranger = transform.parent.GetComponent<Leafranger>();
         
-        if (leafranger != null && leafranger.Leafattack4 && touching.IsGround&&leafranger.Isalive)
+        if (leafranger != null && leafranger.Leafattack4 && touching.IsGround&&leafranger.Isalive&&leafranger.Attack4cooldown==0)
         {
             animator.SetTrigger("leafattack4weapon");
 
         }
+        
+
     }
 }
