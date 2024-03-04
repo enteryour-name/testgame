@@ -8,8 +8,8 @@ public class CtrDeathMenu : MonoBehaviour
     // Start is called before the first frame update
     private CanvasRenderer canvasRenderer;
     public GameObject deathmenu;
-    private bool ispause = true;
-[SerializeField]    private CtrPlayerHealth health;
+    private bool dead = false;
+[SerializeField]   public CtrPlayerHealth health;
 
     void Start()
     {
@@ -28,24 +28,20 @@ public class CtrDeathMenu : MonoBehaviour
     IEnumerator WaitForDeath(float time)
     {
         yield return new WaitForSeconds(time);
-        ChangeDeadMenu();
-    }
-    void ChangeDeadMenu()
-    {
-        deathmenu.SetActive(ispause);
-        Time.timeScale = 1.0f;
+        deathmenu.SetActive(true);
         Time.timeScale = 0f;
-        return;
+        Debug.Log("pause");
     }
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(health.health);
-        if (health.health <= 0)
+        if (health == null)
+        { }
+        else if (health.health <= 0 && !dead)
         {
-            ispause = true;
             Time.timeScale = 0.5f;
-            StartCoroutine(WaitForDeath(3));
+            StartCoroutine(WaitForDeath(2));
+            dead = true;
         }
     }
 }
