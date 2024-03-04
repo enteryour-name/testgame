@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FAtk5Cooldown
+  m_Name: LAtk3Cooldown
   m_Shader: {fileID: 4800000, guid: 8d549a0bbe4dc60429f2b537365c626c, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -24,13 +24,13 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 53c3dc76a6b876e479b40c5123763fa6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6847bafe072fd1943abc2fbd61dd97d6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _Speed: 1.0471976
-    - _StartTime: 90.03211
+    - _StartTime: 12.428859
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 0.7294118}
   m_BuildTextureStacks: []

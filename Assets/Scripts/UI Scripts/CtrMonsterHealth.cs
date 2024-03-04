@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CtrMonsterHealth : MonoBehaviour
@@ -11,10 +12,13 @@ public class CtrMonsterHealth : MonoBehaviour
     public GameObject healthbarobj;
     private Transform tr;
     private Vector3 origin;
-    private Monster2 monster;
+    private Rigidbody2D rigidbody2D;
+    private Damageable damageable;
     private void Refresh()
     {
-        health = maxHealth;
+        maxHealth = GetComponent<Damageable>().Maxhealth;
+        damageable = GetComponent<Damageable>();
+        health = damageable.Health;
     }
     private void DecreaseHealth()
     {
@@ -22,24 +26,22 @@ public class CtrMonsterHealth : MonoBehaviour
     }
     void Start()
     {
-        monster = GetComponent<Monster2>();
-        if(monster != null )
-        {
-            Debug.Log("successmonster");
-        }
         Refresh();
         tr = healthbarobj.GetComponent<Transform>();
         origin = tr.localScale;
+        rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(monster.WalkDirection == Monster2.WalkableDirection.Left)
+        health = damageable.Health;
+        if (health > 0)
         {
-            tr.rotation = new Quaternion (0, 180, 0,0);
+            tr.localScale = new(health / maxHealth * origin.x, origin.y, origin.z);
         }
-        DecreaseHealth();
-        tr.localScale = new(health / maxHealth * origin.x, origin.y, origin.z);
+        else
+            this.GameObject().SetActive(false);
     }
+    
 }

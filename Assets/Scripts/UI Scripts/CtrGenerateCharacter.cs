@@ -25,6 +25,8 @@ public class CtrGenerateCharacter : MonoBehaviour
             camera.Follow = character1.transform;
             character1.SetActive(true);
             character2.SetActive(false);
+            GameObject.Find("FireSkillsUI").SetActive(true);
+            GameObject.Find("LeafSkillsUI").SetActive(false);
         }
        else if(commu.character == 2)
         {
@@ -32,6 +34,8 @@ public class CtrGenerateCharacter : MonoBehaviour
             camera.Follow = character2.transform;
             character1.SetActive(false);
             character2.SetActive(true);
+            GameObject.Find("FireSkillsUI").SetActive(false);
+            GameObject.Find("LeafSkillsUI").SetActive(true);
         }
     }
     void Start()

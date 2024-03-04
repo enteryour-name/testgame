@@ -33,6 +33,7 @@ public class CtrDeathMenu : MonoBehaviour
     void ChangeDeadMenu()
     {
         deathmenu.SetActive(ispause);
+        Time.timeScale = 1.0f;
         Time.timeScale = 0f;
         return;
     }

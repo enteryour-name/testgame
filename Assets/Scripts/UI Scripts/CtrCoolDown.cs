@@ -10,16 +10,23 @@ public class CtrCoolDown : MonoBehaviour
     public Material CooldownStage;
     public CanvasRenderer cr;
     public float CoolDownTime;
-    Firecontrol firecontrol;
+    public Firecontrol firecontrol;
+    public Leafranger leafranger;
+    public Touching touching;
+    public GameObject character1;
+    public GameObject character2;
     private bool iscooldown = false;
-    public float skill = 5;
+    public float skill = 15;
     private bool isskill(float skillnumber)
     {
         switch (skillnumber)
         {
-            case 3: return firecontrol.Fireattack3;
-            case 4: return firecontrol.Fireattack4;
-            case 5:return firecontrol.Fireattack5;
+            case 13: return firecontrol.Fireattack3;
+            case 14: return firecontrol.Fireattack4;
+            case 15:return firecontrol.Fireattack5;
+            case 23:return leafranger.Leafattack3;
+            case 24:return leafranger.Leafattack4;
+            case 25:return leafranger.Leafattack5;
             default: return false;
         }
     }
@@ -27,8 +34,15 @@ public class CtrCoolDown : MonoBehaviour
     void Start()
     {
         cr = GetComponent<CanvasRenderer>();
-        firecontrol = GameObject.FindObjectOfType<Firecontrol>().GetComponent<Firecontrol>();
         cr.SetMaterial(NormalStage,null);
+        if(10f<skill&& skill<20f)
+        {
+            touching = character1.GetComponent<Touching>();
+        }
+        else
+        {
+            touching=character2.GetComponent<Touching>();
+        }
     }
     IEnumerator WaitForSeconds(float time)
     {
@@ -51,7 +65,7 @@ public class CtrCoolDown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isskill(skill)) 
+        if(isskill(skill) && touching.IsGround) 
         {
             IntoCoolDown();
         }
