@@ -67,7 +67,7 @@ public class Leafranger : MonoBehaviour
         }
         private set
         {
-            if (_leafisfacingright != value&&!Leafattack2&&!Leafattack3&&!Leafattack4&&!Leafattack5)
+            if (_leafisfacingright != value)
             {
                 transform.localScale *= new Vector2(-1, 1);
             }

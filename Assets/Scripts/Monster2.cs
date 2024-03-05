@@ -67,7 +67,7 @@ public class Monster2 : MonoBehaviour
         }
         if (!damageable.Lockvelocity)
         {
-            if (Canmove)
+            if (Canmove&&touching.IsGround)
                 rb.velocity = new Vector2(walkspeed * walkDirectionVector.x, rb.velocity.y);
             else
             {

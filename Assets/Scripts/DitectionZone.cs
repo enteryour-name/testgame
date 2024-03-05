@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DitectionZone : MonoBehaviour
 {
+   
     public List<Collider2D> detectedColiders = new List<Collider2D>();
     Collider2D col;
     private void Awake()
