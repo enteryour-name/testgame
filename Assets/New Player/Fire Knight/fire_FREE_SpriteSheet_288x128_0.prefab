@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 2124662020634083954}
   - component: {fileID: 130058003322380810}
   - component: {fileID: 6863297046087988939}
+  - component: {fileID: 8078654722087424627}
   - component: {fileID: 6285423956553533463}
   m_Layer: 7
   m_Name: fire_FREE_SpriteSheet_288x128_0
@@ -688,6 +689,21 @@ MonoBehaviour:
   _isground: 0
   _isonwall: 0
   _isonceiling: 0
+--- !u!114 &8078654722087424627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2800725656038063988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6c09f5779072c40a962fee96a7f1ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canskill3: 0
+  canskill4: 0
+  canskill5: 0
 --- !u!114 &6285423956553533463
 MonoBehaviour:
   m_ObjectHideFlags: 0

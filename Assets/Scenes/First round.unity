@@ -181,7 +181,7 @@ MonoBehaviour:
   leafranger: {fileID: 0}
   touching: {fileID: 0}
   character1: {fileID: 196335850}
-  character2: {fileID: 0}
+  character2: {fileID: 1355864054}
   skill: 13
 --- !u!114 &45165542
 MonoBehaviour:
@@ -531,6 +531,10 @@ PrefabInstance:
     - target: {fileID: 8159478804267233831, guid: d0a7cfb05dfd1bd4d8d98e8c1a7f9ebd, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167405142877073669, guid: d0a7cfb05dfd1bd4d8d98e8c1a7f9ebd, type: 3}
+      propertyPath: exp
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8167405142877073669, guid: d0a7cfb05dfd1bd4d8d98e8c1a7f9ebd, type: 3}
       propertyPath: ctrExpLevel
@@ -937,9 +941,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1440748055}
-        m_TargetAssemblyTypeName: CtrExpLevel, Assembly-CSharp
-        m_MethodName: MadeChoice
+      - m_Target: {fileID: 1473023207}
+        m_TargetAssemblyTypeName: CtrLevelUpMenu, Assembly-CSharp
+        m_MethodName: DamageUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1070,9 +1074,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1440748055}
-        m_TargetAssemblyTypeName: CtrExpLevel, Assembly-CSharp
-        m_MethodName: MadeChoice
+      - m_Target: {fileID: 1473023207}
+        m_TargetAssemblyTypeName: CtrLevelUpMenu, Assembly-CSharp
+        m_MethodName: AcquireSkill
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1170,6 +1174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathmenu: {fileID: 76383231}
+  ctrGenerateCharacter: {fileID: 565041427}
   health: {fileID: 0}
 --- !u!1 &196335850 stripped
 GameObject:
@@ -19223,7 +19228,7 @@ MonoBehaviour:
   leafranger: {fileID: 0}
   touching: {fileID: 0}
   character1: {fileID: 196335850}
-  character2: {fileID: 196335850}
+  character2: {fileID: 1355864054}
   skill: 14
 --- !u!114 &400253687 stripped
 MonoBehaviour:
@@ -19501,6 +19506,10 @@ PrefabInstance:
       value: -0.19
       objectReference: {fileID: 0}
     - target: {fileID: 8167405142877073669, guid: d0a7cfb05dfd1bd4d8d98e8c1a7f9ebd, type: 3}
+      propertyPath: exp
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167405142877073669, guid: d0a7cfb05dfd1bd4d8d98e8c1a7f9ebd, type: 3}
       propertyPath: ctrExpLevel
       value: 
       objectReference: {fileID: 1440748055}
@@ -19577,8 +19586,8 @@ MonoBehaviour:
   firecontrol: {fileID: 196335864}
   leafranger: {fileID: 0}
   touching: {fileID: 0}
-  character1: {fileID: 0}
-  character2: {fileID: 0}
+  character1: {fileID: 196335850}
+  character2: {fileID: 1355864054}
   skill: 15
 --- !u!114 &501320322
 MonoBehaviour:
@@ -19955,9 +19964,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character1: {fileID: 196335850}
   character2: {fileID: 1355864054}
+  character: {fileID: 0}
   commu: {fileID: 0}
-  defaultvalue: 2
-  camera: {fileID: 0}
+  defaultvalue: 1
+  receivevalue: 0
+  camera: {fileID: 1509478826}
+  FireSkillUI: {fileID: 1326569257}
+  LeafSkillUI: {fileID: 1015778354}
+  Refreshtime: 0
 --- !u!4 &565041428
 Transform:
   m_ObjectHideFlags: 0
@@ -20981,7 +20995,7 @@ GameObject:
   m_Component:
   - component: {fileID: 826732174}
   m_Layer: 5
-  m_Name: PauseMenu
+  m_Name: LevelUpMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21270,6 +21284,10 @@ PrefabInstance:
     - target: {fileID: 8159478804267233831, guid: d0a7cfb05dfd1bd4d8d98e8c1a7f9ebd, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167405142877073669, guid: d0a7cfb05dfd1bd4d8d98e8c1a7f9ebd, type: 3}
+      propertyPath: exp
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8167405142877073669, guid: d0a7cfb05dfd1bd4d8d98e8c1a7f9ebd, type: 3}
       propertyPath: ctrExpLevel
@@ -21586,9 +21604,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1440748055}
-        m_TargetAssemblyTypeName: CtrExpLevel, Assembly-CSharp
-        m_MethodName: MadeChoice
+      - m_Target: {fileID: 1473023207}
+        m_TargetAssemblyTypeName: CtrLevelUpMenu, Assembly-CSharp
+        m_MethodName: HealthUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23417,7 +23435,9 @@ MonoBehaviour:
   - 250
   - 400
   damageable: {fileID: 0}
-  LevelUpMenu: {fileID: 0}
+  LevelUpMenu: {fileID: 826732173}
+  character: {fileID: 0}
+  ctrGenerateCharacter: {fileID: 565041427}
 --- !u!1 &1473023205
 GameObject:
   m_ObjectHideFlags: 0
@@ -23427,7 +23447,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1473023206}
-  - component: {fileID: 1473023208}
   - component: {fileID: 1473023207}
   m_Layer: 5
   m_Name: LevelUpMenuListen
@@ -23465,23 +23484,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1473023205}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d17055bf89b4f84a882e91cdda047cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 11414e9ce190768488e0e4b31b610ec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pausemenu: {fileID: 826732173}
---- !u!114 &1473023208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1473023205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 907df0f8bd8b8f54ca84be46da1b6577, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pausemenu: {fileID: 826732173}
+  damageable: {fileID: 0}
+  character: {fileID: 0}
+  levelUpMenu: {fileID: 826732173}
+  ctrGenerateCharacter: {fileID: 565041427}
+  monster2Attack: []
+  damageUpTime: 1.3
+  ctrSkill: {fileID: 0}
 --- !u!1 &1509478825
 GameObject:
   m_ObjectHideFlags: 0
@@ -24512,6 +24524,18 @@ PrefabInstance:
       propertyPath: healthbarobj
       value: 
       objectReference: {fileID: 339076505}
+    - target: {fileID: 8078654722087424627, guid: d5fa393c66e09ff479a778b60cdc7b82, type: 3}
+      propertyPath: canskill3
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8078654722087424627, guid: d5fa393c66e09ff479a778b60cdc7b82, type: 3}
+      propertyPath: canskill4
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8078654722087424627, guid: d5fa393c66e09ff479a778b60cdc7b82, type: 3}
+      propertyPath: canskill5
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8180957078731105266, guid: d5fa393c66e09ff479a778b60cdc7b82, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -24752,8 +24776,8 @@ RectTransform:
   - {fileID: 1371767521}
   - {fileID: 1326569258}
   - {fileID: 1015778355}
-  - {fileID: 1090071299}
   - {fileID: 1473023206}
+  - {fileID: 1090071299}
   - {fileID: 188359364}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

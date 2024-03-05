@@ -50,4 +50,8 @@ public class CtrPlayerHealth : MonoBehaviour
         rtr.localScale= new (health / maxHealth,1f,1f);
         HealthBartext.text = $"{health:f0}/{maxHealth:f0}";
     }
+    public void RefreshMax()
+    {
+        maxHealth = damageable.Maxhealth;
+    }
 }

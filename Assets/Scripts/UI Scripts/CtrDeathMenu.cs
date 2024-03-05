@@ -9,28 +9,29 @@ public class CtrDeathMenu : MonoBehaviour
     private CanvasRenderer canvasRenderer;
     public GameObject deathmenu;
     private bool dead = false;
-[SerializeField]   public CtrPlayerHealth health;
+    public CtrGenerateCharacter ctrGenerateCharacter;
+    public CtrPlayerHealth health;
 
     void Start()
     {
-        StartCoroutine(WaitForSeconds(0.01f));
-    }
-    IEnumerator WaitForSeconds(float time)
-    {
-        yield return new WaitForSeconds(time);
-        health = GameObject.FindObjectOfType<CtrPlayerHealth>();
+        if(ctrGenerateCharacter.Refreshtime == 0)
+        {
+            ctrGenerateCharacter.Refresh();
+        }
+        health = ctrGenerateCharacter.character.GetComponent<CtrPlayerHealth>();
         deathmenu.SetActive(false);
         if(deathmenu == null)
         {
             deathmenu = GameObject.Find("EndMenu");
         }
     }
+
+
     IEnumerator WaitForDeath(float time)
     {
         yield return new WaitForSeconds(time);
         deathmenu.SetActive(true);
         Time.timeScale = 0f;
-        Debug.Log("pause");
     }
     // Update is called once per frame
     void Update()
@@ -39,7 +40,7 @@ public class CtrDeathMenu : MonoBehaviour
         { }
         else if (health.health <= 0 && !dead)
         {
-            Time.timeScale = 0.5f;
+            Time.timeScale = 0.3f;
             StartCoroutine(WaitForDeath(2));
             dead = true;
         }
