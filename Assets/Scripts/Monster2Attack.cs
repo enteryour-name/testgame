@@ -7,6 +7,8 @@ public class Monster2Attack : MonoBehaviour
     Collider2D attackcolloider;
     public int attackDamage=10;
     public Vector2 knockback=Vector2.zero;
+    
+
 
     private void Awake()
     {
