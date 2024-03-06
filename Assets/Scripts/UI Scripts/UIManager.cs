@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     private void Awake()
     {
         gamecanvas=FindObjectOfType<Canvas>();
+       
     }
     public void Charactertookdamage(GameObject character,int damagerecevied)
     {
@@ -26,9 +27,15 @@ public class UIManager : MonoBehaviour
         TMP_Text tmpText = Instantiate(damagetextPrefab, spawnposition, Quaternion.identity, gamecanvas.transform).GetComponent<TMP_Text>();
         tmpText.text = healthrestored.ToString();
     }
-    public void CharacterHealed()
+    private void OnEnable()
     {
-
+        CharacterEvents.characterdamaged+=(Charactertookdamage);
+        CharacterEvents.characterhealed+=(Characterhealed);
+    }
+    private void OnDisable()
+    {
+        CharacterEvents.characterdamaged-=(Charactertookdamage);
+        CharacterEvents.characterhealed-=(Characterhealed);
     }
     // Start is called before the first frame update
     void Start()
