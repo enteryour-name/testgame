@@ -1,6 +1,7 @@
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Mail;
 using UnityEngine;
 
 public class CtrGenerateCharacter : MonoBehaviour
@@ -8,37 +9,40 @@ public class CtrGenerateCharacter : MonoBehaviour
     // Start is called before the first frame update
     public GameObject character1;
     public GameObject character2;
+    public GameObject character;
     public ctrcommunication commu;
-    private GameObject go;
     public int defaultvalue = 1;
+    public int receivevalue = 0;
     [SerializeField] private CinemachineVirtualCamera camera;
+    public GameObject FireSkillUI;
+    public GameObject LeafSkillUI;
     void generate()
     {
-       if(commu == null)
+        if (receivevalue == 1)
         {
-            commu = new ctrcommunication();
-            commu.character = defaultvalue;
-        }
-       if(commu.character == 1)
-        {
-            camera.LookAt = character1.transform;
-            camera.Follow = character1.transform;
+            character = character1;
             character1.SetActive(true);
             character2.SetActive(false);
-            GameObject.Find("FireSkillsUI").SetActive(true);
-            GameObject.Find("LeafSkillsUI").SetActive(false);
+            FireSkillUI.SetActive(true);
+            LeafSkillUI.SetActive(false);
         }
-       else if(commu.character == 2)
+        else if (receivevalue == 2)
         {
-            camera.LookAt = character2.transform;
-            camera.Follow = character2.transform;
+            character = character2;
             character1.SetActive(false);
             character2.SetActive(true);
-            GameObject.Find("FireSkillsUI").SetActive(false);
-            GameObject.Find("LeafSkillsUI").SetActive(true);
+            FireSkillUI.SetActive(false);
+            LeafSkillUI.SetActive(true);
         }
+        camera.LookAt = character.transform;
+        camera.Follow = character.transform;
     }
-    void Start()
+    void Awake()
+    {
+        Refresh();
+    }
+    public int Refreshtime = 0;
+    public void Refresh()
     {
         camera = GameObject.FindObjectOfType<CinemachineVirtualCamera>();
         if(character1 == null)
@@ -50,7 +54,17 @@ public class CtrGenerateCharacter : MonoBehaviour
             character2 = GameObject.Find("Elementals_leaf_ranger_288x128_SpriteSheet_0");
         }
         commu = GameObject.FindObjectOfType<ctrcommunication>();
+
+        if (commu == null)
+        {
+            receivevalue = defaultvalue;
+        }
+        else
+        {
+            receivevalue = commu.character;
+        }
         generate();
+        Refreshtime++;
     }
 
     // Update is called once per frame

@@ -8,7 +8,8 @@ public class RefreshTime : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1.0f;
-        Destroy(GameObject.FindObjectOfType<DontDestroy>().gameObject);
+        if(GameObject.FindObjectOfType<DontDestroy>() != null )
+            Destroy(GameObject.FindObjectOfType<DontDestroy>().gameObject);
     }
 
     // Update is called once per frame

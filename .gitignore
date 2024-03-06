@@ -9,7 +9,13 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
-
+#shaderMaterials
+FATK3Cooldown.mat
+FATK4Cooldown.mat
+FATK5Cooldown.mat
+LATK3Cooldown.mat
+LATK4Cooldown.mat
+LATK5Cooldown.mat
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/

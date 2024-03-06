@@ -13,10 +13,18 @@ public class CtrExpLevel : MonoBehaviour
     public float[] maxexp = {0,100,120,160,250,400,10000};
     public Damageable damageable;
     public GameObject LevelUpMenu;
+[SerializeField]    private GameObject character;
+    public CtrGenerateCharacter ctrGenerateCharacter;
     // Start is called before the first frame update
     void Start()
     {
+        if(ctrGenerateCharacter.Refreshtime == 0)
+        {
+            ctrGenerateCharacter.Refresh();
+        }
         LevelUpMenu.SetActive(false);
+        character = ctrGenerateCharacter.character;
+        damageable = character.GetComponent<Damageable>();
     }
 
     // Update is called once per frame
@@ -34,11 +42,6 @@ public class CtrExpLevel : MonoBehaviour
         }
         ExpBartext.text = $"{exp:f0}/{maxexp[level]:f0}";
         TargetExpBar.localScale = new Vector3 (exp / maxexp[level],1,0);
-    }
-    public void MadeChoice()
-    {
-        Time.timeScale = 1;
-        LevelUpMenu.SetActive (false);
     }
     private void Update()
     {

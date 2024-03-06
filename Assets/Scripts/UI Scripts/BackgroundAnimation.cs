@@ -11,17 +11,6 @@ public class BackgroundAnimation : MonoBehaviour
     public float amplitudeY = 1f;
     public float frequency = 1f;
     public float sita = 30f;
-    public void trianglef()
-    {
-        float getsin()
-        {
-           return  Mathf.Sin(Time.time * frequency) * amplitudeX;
-        }
-        float getcos()
-        {
-        return Mathf.Cos(Time.time * frequency) * amplitudeY;
-        }
-    }
     Transform transform = null;
     private Vector3 startPos;
     void newmove()
@@ -36,7 +25,6 @@ public class BackgroundAnimation : MonoBehaviour
         sita = sita / 180f * 3.14f;
         transform = GetComponent<Transform>();
         startPos = transform.position;
-        Debug.Log(startPos);
     }
     void ovalmove()
     {
