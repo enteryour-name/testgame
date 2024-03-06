@@ -29,11 +29,12 @@ public class newbullet : MonoBehaviour
                 Debug.Log(collision.name + "hit for" + damage);
                 Destroy(gameObject);
             }
+            
         }
     }
     // Update is called once per frame
     void Update()
     {
-        
+        Destroy(gameObject,8f);
     }
 }
