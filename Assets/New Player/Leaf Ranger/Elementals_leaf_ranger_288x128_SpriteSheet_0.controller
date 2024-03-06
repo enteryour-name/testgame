@@ -39,6 +39,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: attack4cooldown
     m_EventTreshold: 0.00001
+  - m_ConditionMode: 1
+    m_ConditionEvent: canattack4
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6210101692946301769}
   m_Solo: 0
@@ -66,6 +69,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: -5198249192818616096}
   - {fileID: 6316952456419390872}
+  - {fileID: -6272083149966213852}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -284,13 +288,13 @@ AnimatorStateMachine:
     m_Position: {x: 390, y: -100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -9094785195102716276}
-    m_Position: {x: 570, y: 80, z: 0}
+    m_Position: {x: 500, y: 90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4295135049055695771}
     m_Position: {x: 330, y: 250, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -9200534073053091665}
-    m_Position: {x: 310, y: 10, z: 0}
+    m_Position: {x: 390, y: -50, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -471,6 +475,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: attack5cooldown
     m_EventTreshold: 0.00001
+  - m_ConditionMode: 1
+    m_ConditionEvent: canattack5
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 232387951043317981}
   m_Solo: 0
@@ -587,6 +594,31 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1101 &-6272083149966213852
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: isground
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 0}
+  m_Solo: 1
+  m_Mute: 0
+  m_IsExit: 1
+  serializedVersion: 3
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1102 &-6223338466499683847
 AnimatorState:
   serializedVersion: 6
@@ -661,11 +693,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floatname: attack5cooldown
-  updateOnStateEnter: 0
-  updateOnStateExit: 1
+  updateOnStateEnter: 1
+  updateOnStateExit: 0
   updateOnStateMachineEnter: 0
   updateOnStateMachineExit: 0
-  valueOnEnter: 0
+  valueOnEnter: 5
   valueOnExit: 5
 --- !u!1101 &-5499803033345026612
 AnimatorStateTransition:
@@ -742,7 +774,7 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
+  - m_ConditionMode: 1
     m_ConditionEvent: leafattack1
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
@@ -1189,6 +1221,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: attack3cooldown
     m_EventTreshold: 0.00001
+  - m_ConditionMode: 1
+    m_ConditionEvent: canattack3
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6223338466499683847}
   m_Solo: 0
@@ -1211,8 +1246,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: leafattack4
+  - m_ConditionMode: 3
+    m_ConditionEvent: attack4cooldown
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2566818908111318277}
@@ -1511,6 +1546,24 @@ AnimatorController:
     m_Controller: {fileID: 9100000}
   - m_Name: attacktime
     m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: canattack3
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: canattack4
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: canattack5
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -1986,6 +2039,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: attack3cooldown
     m_EventTreshold: 0.00001
+  - m_ConditionMode: 1
+    m_ConditionEvent: canattack3
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6223338466499683847}
   m_Solo: 0
@@ -2102,8 +2158,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: leafattack5
+  - m_ConditionMode: 3
+    m_ConditionEvent: attack5cooldown
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2566818908111318277}
@@ -2182,8 +2238,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: leafattack4
+  - m_ConditionMode: 3
+    m_ConditionEvent: attack4cooldown
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8310497586327718526}
@@ -2326,8 +2382,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: leafattack5
+  - m_ConditionMode: 3
+    m_ConditionEvent: attack5cooldown
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8310497586327718526}
@@ -2351,8 +2407,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: leafattack3
+  - m_ConditionMode: 3
+    m_ConditionEvent: attack3cooldown
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2566818908111318277}
@@ -2508,11 +2564,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floatname: attack3cooldown
-  updateOnStateEnter: 0
-  updateOnStateExit: 1
+  updateOnStateEnter: 1
+  updateOnStateExit: 0
   updateOnStateMachineEnter: 0
   updateOnStateMachineExit: 0
-  valueOnEnter: 0
+  valueOnEnter: 5
   valueOnExit: 5
 --- !u!1101 &7636541523851893313
 AnimatorStateTransition:
@@ -2553,6 +2609,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: attack5cooldown
     m_EventTreshold: 0.00001
+  - m_ConditionMode: 1
+    m_ConditionEvent: canattack5
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 232387951043317981}
   m_Solo: 0
@@ -2653,9 +2712,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: leafattack3
-    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: attack3cooldown
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8310497586327718526}
   m_Solo: 0
@@ -2814,6 +2873,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: attack4cooldown
     m_EventTreshold: 0.00001
+  - m_ConditionMode: 1
+    m_ConditionEvent: canattack4
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6210101692946301769}
   m_Solo: 0
@@ -2841,9 +2903,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floatname: attack4cooldown
-  updateOnStateEnter: 0
-  updateOnStateExit: 1
+  updateOnStateEnter: 1
+  updateOnStateExit: 0
   updateOnStateMachineEnter: 0
   updateOnStateMachineExit: 0
-  valueOnEnter: 0
+  valueOnEnter: 5
   valueOnExit: 5

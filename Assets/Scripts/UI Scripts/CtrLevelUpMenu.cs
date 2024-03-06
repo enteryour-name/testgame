@@ -11,6 +11,9 @@ public class CtrLevelUpMenu : MonoBehaviour
     public Monster2Attack[] monster2Attack;
     public float damageUpTime = 1.3f;
     public CtrSkill ctrSkill;
+    public CtrLevelUpSkill ctrLevelUpSkill;
+    public int skillnum;
+    public GameObject arrowprefab;
     public void DamageUp()
     {
         monster2Attack = character.GetComponentsInChildren<Monster2Attack>();
@@ -18,21 +21,26 @@ public class CtrLevelUpMenu : MonoBehaviour
         {
             monsterAttack.attackDamage = (int)((float)monsterAttack.attackDamage * damageUpTime);
         }
+        arrowprefab.GetComponent<newbullet>().damage = (int)((float)arrowprefab.GetComponent<newbullet>().damage * 1.3f);
         MadeChoice();
     }
     public void HealthUp()
     {
         damageable.Maxhealth += 50f;
         character.GetComponent<CtrPlayerHealth>().RefreshMax();
-        damageable.Health += 50f;
+        damageable.Health += 50f;       
         MadeChoice();
     }
     public void AcquireSkill()
     {
         ctrSkill.enabled = true;
-        ctrSkill.canskill3 = true;
-        ctrSkill.canskill4 = true;
-        ctrSkill.canskill5 = true;
+        switch(skillnum)
+        {
+            case 3: ctrSkill.canskill3 = true; break;
+            case 4: ctrSkill.canskill4 = true; break;
+            case 5: ctrSkill.canskill5 = true; break;
+        }
+        GetSkillNum();
         MadeChoice();
     }
     public void MadeChoice()
@@ -46,9 +54,42 @@ public class CtrLevelUpMenu : MonoBehaviour
         character = ctrGenerateCharacter.character;
         damageable = character.GetComponent<Damageable>();
         ctrSkill = character.GetComponent<CtrSkill>();
+        GetSkillNum();
     }
+    void GetSkillNum()
+    {
+
+        if (ctrSkill.canskill3)
+        {
+            if (ctrSkill.canskill4)
+            {
+                if (ctrSkill.canskill5)
+                    skillnum = 1;
+                else
+                    skillnum = 5;
+            }
+            else
+            {
+                skillnum = 4;
+            }
+
+        }
+        else
+        {
+            if (ctrSkill.canskill4)
+            {
+                skillnum = 3;
+            }
+            else
+            {
+                skillnum = 3 + (int)Time.time % 2;
+            }
+        }
+    }
+
     void Update()
     {
         
     }
+
 }

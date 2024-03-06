@@ -987,7 +987,7 @@ MonoBehaviour:
     LensShift: {x: 0, y: 0}
     GateFit: 2
     FocusDistance: 10
-    m_SensorSize: {x: 1, y: 1}
+    m_SensorSize: {x: 100, y: 24}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2493,6 +2493,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1976969763877769329, guid: 1a3f3c136d14dc148ad006ea100bc166, type: 3}
+      propertyPath: _leafattack2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5115237689684302985, guid: 1a3f3c136d14dc148ad006ea100bc166, type: 3}
+      propertyPath: canskill3
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5115237689684302985, guid: 1a3f3c136d14dc148ad006ea100bc166, type: 3}
+      propertyPath: canskill4
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5115237689684302985, guid: 1a3f3c136d14dc148ad006ea100bc166, type: 3}
+      propertyPath: canskill5
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7692916946745527432, guid: 1a3f3c136d14dc148ad006ea100bc166, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.72
