@@ -23,7 +23,7 @@ public class CtrDamagePrint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        recttransform.localScale = new Vector3((Time.time - starttime) / time * maxsize, (Time.time-starttime)/time*maxsize, 1);
+        recttransform.localScale = new Vector3((Time.time - starttime) / time * (maxsize-1)+1f, (Time.time-starttime)/time*(maxsize-1)+1f, 1);
         recttransform.localPosition = new Vector3(0, offset + (Time.time - starttime) * speed, -1);
         if(transform.parent.localScale.x <0 )
         {

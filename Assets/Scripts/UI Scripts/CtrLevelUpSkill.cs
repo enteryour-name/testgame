@@ -24,22 +24,26 @@ public class CtrLevelUpSkill : MonoBehaviour
     private void OnEnable()
     {
         skillnum = (int)Time.time % 3;
-        if(ctrGenerateCharacter.receivevalue == 1)
+        if (ctrGenerateCharacter.receivevalue == 1)
         {
             switch (skillnum)
             {
-                case 0:image.sprite = skill13;break;
-                case 1:image.sprite = skill14;break;
-                case 2:image.sprite = skill15;break;
-                default:image.sprite = skill13;break;
-            }
-            switch (skillnum)
-            {
-                case 1:image.sprite = skill23;break;
-                case 2:image.sprite = skill24;break;
-                case 3:image.sprite = skill25;break;
-                default :image.sprite = skill23;break;
+                case 0: image.sprite = skill13; break;
+                case 1: image.sprite = skill14; break;
+                case 2: image.sprite = skill15; break;
+                default: image.sprite = skill13; break;
             }
         }
+        else
+        {
+            switch (skillnum)
+            {
+                case 1: image.sprite = skill23; break;
+                case 2: image.sprite = skill24; break;
+                case 3: image.sprite = skill25; break;
+                default: image.sprite = skill23; break;
+            }
+        }
+        
     }
 }

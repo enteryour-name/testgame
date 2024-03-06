@@ -34,7 +34,7 @@ public class CtrGenerateDamage : MonoBehaviour
     void GenerateText()
     {
         Debug.Log("Generate!");
-        GameObject gameObject = Instantiate(textObj, transform);
+        GameObject gameObject = Instantiate(textObj,Vector3.zero,Quaternion.identity, transform);
         textMeshPro = gameObject.GetComponent<TextMeshPro>();
         textMeshPro.text = $"{damage}";
         Destroy(gameObject, gameObject.GetComponent<CtrDamagePrint>().time);
