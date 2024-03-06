@@ -9,13 +9,13 @@ public class Attack4weapon : MonoBehaviour
     Leafranger leafranger;
     Animator animator;
     Rigidbody2D rb;
+    public CtrSkill ctrskill;
 
 
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-
 
 
     }
@@ -34,8 +34,9 @@ public class Attack4weapon : MonoBehaviour
         animator = GetComponent<Animator>();
         leafranger = transform.parent.GetComponent<Leafranger>();
         
-        if (leafranger != null && leafranger.Leafattack4 && touching.IsGround&&leafranger.Isalive&&leafranger.Attack4cooldown==0)
+        if (leafranger != null && leafranger.Leafattack4 && touching.IsGround&&leafranger.Isalive&&leafranger.Attack4cooldown==0 && ctrskill.canskill4)
         {
+            Debug.Log("animator");
             animator.SetTrigger("leafattack4weapon");
 
         }

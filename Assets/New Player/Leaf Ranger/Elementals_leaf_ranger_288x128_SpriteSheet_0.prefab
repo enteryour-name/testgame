@@ -664,7 +664,7 @@ Rigidbody2D:
   m_Mass: 1.8498546
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3.5
+  m_GravityScale: 5
   m_Material: {fileID: 6200000, guid: 342994d81e7d9b44b82e9fe978c28c95, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1063,9 +1063,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e6c09f5779072c40a962fee96a7f1ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canskill3: 0
-  canskill4: 0
-  canskill5: 0
+  canskill3: 1
+  canskill4: 1
+  canskill5: 1
 --- !u!1001 &892288802027828761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1156,6 +1156,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7692916946745527432}
     m_Modifications:
+    - target: {fileID: 692076779511427748, guid: 139456820706f9149850f59a98bb7fcc, type: 3}
+      propertyPath: ctrskill
+      value: 
+      objectReference: {fileID: 5115237689684302985}
     - target: {fileID: 2064106491633339206, guid: 139456820706f9149850f59a98bb7fcc, type: 3}
       propertyPath: m_Name
       value: Attack4Weapon
