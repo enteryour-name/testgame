@@ -491,6 +491,7 @@ GameObject:
   - component: {fileID: 4362731974675573008}
   - component: {fileID: 5496132399755052472}
   - component: {fileID: 6577226587167906985}
+  - component: {fileID: 5115237689684302985}
   m_Layer: 7
   m_Name: Elementals_leaf_ranger_288x128_SpriteSheet_0
   m_TagString: Player
@@ -1050,6 +1051,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 9002870284700152148, guid: 766781cf10b86ca4d84c8a999c47c217, type: 3}
   lauchpoint: {fileID: 3394806764342348811}
+--- !u!114 &5115237689684302985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9056845513384046710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6c09f5779072c40a962fee96a7f1ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canskill3: 0
+  canskill4: 0
+  canskill5: 0
 --- !u!1001 &892288802027828761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1354,7 +1370,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3821655346367605869, guid: f6bdc4c328464b8409806d74c3016599, type: 3}
       propertyPath: attackDamage
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6001814895879841810, guid: f6bdc4c328464b8409806d74c3016599, type: 3}
       propertyPath: m_LocalPosition.x
