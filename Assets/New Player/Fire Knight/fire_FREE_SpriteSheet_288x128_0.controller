@@ -584,7 +584,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: attack4cooldown
-    m_EventTreshold: 0
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7157179451780624759}
   m_Solo: 0
@@ -666,7 +666,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: attack3cooldown
-    m_EventTreshold: 0
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5938252478430284601}
   m_Solo: 0
@@ -1224,12 +1224,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floatname: attack3cooldown
-  updateOnStateEnter: 0
-  updateOnStateExit: 1
+  updateOnStateEnter: 1
+  updateOnStateExit: 0
   updateOnStateMachineEnter: 0
   updateOnStateMachineExit: 0
-  valueOnEnter: 0
-  valueOnExit: 5
+  valueOnEnter: 5
+  valueOnExit: 0
 --- !u!1101 &222945791856555527
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1491,7 +1491,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: attack3cooldown
-    m_EventTreshold: 0
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7157179451780624759}
   m_Solo: 0
@@ -1651,7 +1651,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: attack4cooldown
-    m_EventTreshold: 0
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5938252478430284601}
   m_Solo: 0
@@ -2214,9 +2214,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floatname: attack4cooldown
-  updateOnStateEnter: 0
-  updateOnStateExit: 1
+  updateOnStateEnter: 1
+  updateOnStateExit: 0
   updateOnStateMachineEnter: 0
   updateOnStateMachineExit: 0
-  valueOnEnter: 0
+  valueOnEnter: 5
   valueOnExit: 5
