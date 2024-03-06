@@ -17,6 +17,7 @@ public class CtrMonsterHealth : MonoBehaviour
     public GameObject wholehealthbar;
     public Vector3 pos;
     public Transform wholetransform;
+    public float offset;
     private void Refresh()
     {
         maxHealth = GetComponent<Damageable>().Maxhealth;
@@ -34,7 +35,7 @@ public class CtrMonsterHealth : MonoBehaviour
         origin = tr.localScale;
         rigidbody2D = GetComponent<Rigidbody2D>();
         wholetransform = wholehealthbar.GetComponent<Transform>();
-        wholetransform.localPosition = new Vector3(0, 0.2f, 0);
+        wholetransform.localPosition = new Vector3(0, offset, 0);
     }
         // Update is called once per frame
         void Update()
