@@ -1,0 +1,49 @@
+- - - Game time: 0 - - -
+STATE 'Idle' SCORED: 0
+    Precondition 'Precondition 1' met: False
+    Evaluator 'Evaluator 1' scored: NaN
+* * * * * * * * * * * * * * * *
+
+
+- - - Game time: 0.9266906 - - -
+STATE 'Idle' SCORED: 0
+    Precondition 'Precondition 1' met: False
+    Evaluator 'Evaluator 1' scored: NaN
+* * * * * * * * * * * * * * * *
+
+
+- - - Game time: 1.931341 - - -
+STATE 'Idle' SCORED: 0
+    Precondition 'Precondition 1' met: False
+    Evaluator 'Evaluator 1' scored: NaN
+* * * * * * * * * * * * * * * *
+
+
+- - - Game time: 2.935346 - - -
+STATE 'Idle' SCORED: 0
+    Precondition 'Precondition 1' met: False
+    Evaluator 'Evaluator 1' scored: NaN
+* * * * * * * * * * * * * * * *
+
+
+- - - Game time: 3.942213 - - -
+STATE 'Idle' SCORED: 0
+    Precondition 'Precondition 1' met: False
+    Evaluator 'Evaluator 1' scored: NaN
+* * * * * * * * * * * * * * * *
+
+
+- - - Game time: 4.946684 - - -
+STATE 'Idle' SCORED: 0
+    Precondition 'Precondition 1' met: False
+    Evaluator 'Evaluator 1' scored: NaN
+* * * * * * * * * * * * * * * *
+
+
+- - - Game time: 5.94767 - - -
+STATE 'Idle' SCORED: 0
+    Precondition 'Precondition 1' met: False
+    Evaluator 'Evaluator 1' scored: NaN
+* * * * * * * * * * * * * * * *
+
+
