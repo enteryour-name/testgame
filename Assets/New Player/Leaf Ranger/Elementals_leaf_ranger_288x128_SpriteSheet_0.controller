@@ -2568,7 +2568,7 @@ MonoBehaviour:
   updateOnStateExit: 0
   updateOnStateMachineEnter: 0
   updateOnStateMachineExit: 0
-  valueOnEnter: 5
+  valueOnEnter: 2.5
   valueOnExit: 5
 --- !u!1101 &7636541523851893313
 AnimatorStateTransition:
