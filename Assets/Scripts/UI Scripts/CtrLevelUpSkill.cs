@@ -32,6 +32,7 @@ public class CtrLevelUpSkill : MonoBehaviour
     // Update is called once per frame
     private void OnEnable()
     {
+        image = GetComponent<Image>();
         haveset = false;
         skillnum = 10 * ctrGenerateCharacter.receivevalue + ctrLevelUpMenu.skillnum;
         switch (skillnum)
