@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b93118c0574eb542824b91809a335f6, type: 3}
+  m_Name: new
+  m_EditorClassIdentifier: 
+  stateSets:
+  - states:
+    - preconditions: []
+      evaluators: []
+      behaviourTree:
+        rootNode:
+          rid: 4951652978186518528
+      active: 1
+      designation: State 1
+      weight: 1
+      executionFactor: 1
+      baseScore: 0
+      setMinScore: 0
+      minScore: 0
+      setMaxScore: 0
+      maxScore: 0
+      failChance: 0
+      notes: 
+    designation: State Set 1
+  considerationSets: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 4951652978186518528
+      type: {class: Root, ns: KadaXuanwu.UtilityDesigner.Scripts.Execution.Runtime, asm: UtilityDesigner}
+      data:
+        guid: 1fff69482b10b134fbdbadbf49e14035
+        position: {x: 375, y: 10}
+        notes: 
+        child:
+          rid: 4951652978186518530
+    - rid: 4951652978186518529
+      type: {class: DebugLog, ns: KadaXuanwu.UtilityDesigner.Scripts.Execution.Actions, asm: UtilityDesigner}
+      data:
+        guid: de9d0b0d39cce034fa7ed584a4151be0
+        position: {x: 273, y: 334}
+        notes: 
+        message: 1234
+    - rid: 4951652978186518530
+      type: {class: Repeat, ns: KadaXuanwu.UtilityDesigner.Scripts.Execution.Decorators, asm: UtilityDesigner}
+      data:
+        guid: 481197d777813cc45af09635611d9ae3
+        position: {x: 375, y: 105}
+        notes: 
+        child:
+          rid: 4951652978186518531
+    - rid: 4951652978186518531
+      type: {class: Sequence, ns: KadaXuanwu.UtilityDesigner.Scripts.Execution.Composites, asm: UtilityDesigner}
+      data:
+        guid: 1c064e1a9281df94fb889d401dd32004
+        position: {x: 375, y: 210}
+        notes: 
+        children:
+        - rid: 4951652978186518529
+        - rid: 4951652978186518532
+    - rid: 4951652978186518532
+      type: {class: WaitFixed, ns: KadaXuanwu.UtilityDesigner.Scripts.Execution.Actions, asm: UtilityDesigner}
+      data:
+        guid: b4350bd835ab0e34cbed7bea16b9edd8
+        position: {x: 478, y: 334}
+        notes: 
+        duration: 1
+        useRealTime: 0
