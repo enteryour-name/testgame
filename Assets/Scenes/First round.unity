@@ -893,19 +893,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64d0a6b39e357fe4fab66ac3d89cd7d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &196335875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196335850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0a130d46f783ce4a80237aa0ca310fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textObj: {fileID: 557703929181395707, guid: 7739672055cf2c744846147d157546da, type: 3}
 --- !u!1 &196586328
 GameObject:
   m_ObjectHideFlags: 0
@@ -18771,6 +18758,7 @@ GameObject:
   - component: {fileID: 338577481}
   - component: {fileID: 338577483}
   - component: {fileID: 338577482}
+  - component: {fileID: 338577484}
   m_Layer: 5
   m_Name: DamageUP
   m_TagString: Untagged
@@ -18819,7 +18807,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9c268d59f55ab2d40ab31805f26c1e95, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c591dffb141174e4495e21631ab76926, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18837,6 +18825,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 338577480}
   m_CullTransparentMesh: 1
+--- !u!114 &338577484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338577480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3153a433983724a8a9b506ee9f6dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fire1: {fileID: 21300000, guid: 9c268d59f55ab2d40ab31805f26c1e95, type: 3}
+  Fire2: {fileID: 0}
+  Leaf1: {fileID: 21300000, guid: c591dffb141174e4495e21631ab76926, type: 3}
+  Leaf2: {fileID: 0}
+  generateCharacter: {fileID: 0}
+  number: 0
 --- !u!1 &339076505
 GameObject:
   m_ObjectHideFlags: 0
@@ -19773,7 +19779,7 @@ MonoBehaviour:
   character2: {fileID: 1355864054}
   character: {fileID: 0}
   commu: {fileID: 0}
-  defaultvalue: 1
+  defaultvalue: 2
   receivevalue: 0
   camera: {fileID: 1509478826}
   FireSkillUI: {fileID: 1326569257}
@@ -20393,6 +20399,7 @@ GameObject:
   - component: {fileID: 766037511}
   - component: {fileID: 766037513}
   - component: {fileID: 766037512}
+  - component: {fileID: 766037514}
   m_Layer: 5
   m_Name: HealthUP
   m_TagString: Untagged
@@ -20459,6 +20466,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766037510}
   m_CullTransparentMesh: 1
+--- !u!114 &766037514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766037510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3153a433983724a8a9b506ee9f6dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fire1: {fileID: 21300000, guid: d7c7d3890e807e24e8c716f51b41fdd6, type: 3}
+  Fire2: {fileID: 0}
+  Leaf1: {fileID: 2088653937, guid: de02698e1936014468c719591eccf910, type: 3}
+  Leaf2: {fileID: 0}
+  generateCharacter: {fileID: 565041427}
+  number: 0
 --- !u!1 &785357587 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7911505133450699419, guid: 1bfa1505467fa2741af94c4b24691f03, type: 3}
@@ -21429,9 +21454,17 @@ MonoBehaviour:
   skill23: {fileID: 21300000, guid: 6847bafe072fd1943abc2fbd61dd97d6, type: 3}
   skill24: {fileID: 21300000, guid: c7d7154f8763d144d8d7f979f1679a19, type: 3}
   skill25: {fileID: 21300000, guid: eb8f196590e466949b8f35cf204169ed, type: 3}
+  FATK3: {fileID: 45165539}
+  FATK4: {fileID: 391915798}
+  FATK5: {fileID: 501320319}
+  LATK3: {fileID: 820139854}
+  LATK4: {fileID: 1764384843}
+  LATK5: {fileID: 1534304582}
   image: {fileID: 0}
   ctrGenerateCharacter: {fileID: 565041427}
   ctrLevelUpMenu: {fileID: 1473023207}
+  character: {fileID: 0}
+  ctrSkill: {fileID: 0}
 --- !u!1 &1090071298
 GameObject:
   m_ObjectHideFlags: 0
@@ -23180,7 +23213,6 @@ MonoBehaviour:
   monster2Attack: []
   damageUpTime: 1.3
   ctrSkill: {fileID: 0}
-  ctrLevelUpSkill: {fileID: 0}
   skillnum: 0
   arrowprefab: {fileID: 9002870284700152148, guid: 766781cf10b86ca4d84c8a999c47c217, type: 3}
 --- !u!1001 &1502036396
@@ -24445,10 +24477,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2800725656038063988, guid: d5fa393c66e09ff479a778b60cdc7b82, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 196335875}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5fa393c66e09ff479a778b60cdc7b82, type: 3}
 --- !u!1 &1802566398
 GameObject:
@@ -25620,6 +25649,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5115237689684302985, guid: 1a3f3c136d14dc148ad006ea100bc166, type: 3}
+      propertyPath: canskill3
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5115237689684302985, guid: 1a3f3c136d14dc148ad006ea100bc166, type: 3}
+      propertyPath: canskill4
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5115237689684302985, guid: 1a3f3c136d14dc148ad006ea100bc166, type: 3}
+      propertyPath: canskill5
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6087862260764821291, guid: 1a3f3c136d14dc148ad006ea100bc166, type: 3}
       propertyPath: TargetText
       value: 

@@ -17,7 +17,6 @@ public class CtrPauseMenu : MonoBehaviour
     void ChangePauseMenu()
     {
         pausemenu.SetActive(ispause);
-        Debug.Log(ispause);
         if(ispause)
         {
             Time.timeScale = 0;
@@ -31,7 +30,6 @@ public class CtrPauseMenu : MonoBehaviour
     void ChangePauseMenuForButton()
     {
         pausemenu.SetActive(ispause);
-        Debug.Log(ispause);
         if (ispause)
         {
             Time.timeScale = 0;
