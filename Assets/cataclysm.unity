@@ -382,7 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 30
-  knockback: {x: 0, y: 0}
+  knockback: {x: 6, y: 4}
 --- !u!1 &324601694
 GameObject:
   m_ObjectHideFlags: 0
@@ -916,7 +916,7 @@ Transform:
   m_GameObject: {fileID: 1005020651}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.28, y: 10.45, z: 0}
+  m_LocalPosition: {x: -14.85, y: 10.38, z: 0}
   m_LocalScale: {x: 1.7264613, y: 1.7469, z: 1.7469}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1137,7 +1137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 25
-  knockback: {x: 0, y: 0}
+  knockback: {x: 7, y: 5}
 --- !u!1 &1255008937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,7 +1331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 15
-  knockback: {x: 0, y: 0}
+  knockback: {x: 5, y: 3}
 --- !u!1 &1598797463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,7 +1431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 15
-  knockback: {x: 0, y: 0}
+  knockback: {x: 2, y: 2}
 --- !u!1 &1666564798
 GameObject:
   m_ObjectHideFlags: 0
@@ -3022,7 +3022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 30
-  knockback: {x: 0, y: 0}
+  knockback: {x: 5, y: 3}
 --- !u!114 &2089248040 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2269758971109446228, guid: f9656e192136ba045bacb172c1a8bd35, type: 3}
