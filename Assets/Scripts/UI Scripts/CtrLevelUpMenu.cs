@@ -11,7 +11,6 @@ public class CtrLevelUpMenu : MonoBehaviour
     public Monster2Attack[] monster2Attack;
     public float damageUpTime = 1.3f;
     public CtrSkill ctrSkill;
-    public CtrLevelUpSkill ctrLevelUpSkill;
     public int skillnum;
     public GameObject arrowprefab;
     public void DamageUp()
@@ -19,10 +18,11 @@ public class CtrLevelUpMenu : MonoBehaviour
         monster2Attack = character.GetComponentsInChildren<Monster2Attack>();
         foreach (Monster2Attack monsterAttack in monster2Attack)
         {
-            monsterAttack.attackDamage = (int)((float)monsterAttack.attackDamage * damageUpTime);
+            monsterAttack.attackDamage = (int)Mathf.Round((float)monsterAttack.attackDamage * damageUpTime);
         }
-        arrowprefab.GetComponent<newbullet>().damage = (int)((float)arrowprefab.GetComponent<newbullet>().damage * 1.3f);
+        arrowprefab.GetComponent<newbullet>().damage = (int)((float)arrowprefab.GetComponent<newbullet>().damage * damageUpTime);
         MadeChoice();
+        GetSkillNum();
     }
     public void HealthUp()
     {
@@ -30,6 +30,7 @@ public class CtrLevelUpMenu : MonoBehaviour
         character.GetComponent<CtrPlayerHealth>().RefreshMax();
         damageable.Health += 50f;       
         MadeChoice();
+        GetSkillNum();
     }
     public void AcquireSkill()
     {
@@ -40,8 +41,7 @@ public class CtrLevelUpMenu : MonoBehaviour
             case 4: ctrSkill.canskill4 = true; break;
             case 5: ctrSkill.canskill5 = true; break;
         }
-        GetSkillNum();
-        MadeChoice();
+        StartCoroutine(waitforchoose(0.5f));
     }
     public void MadeChoice()
     {
@@ -82,9 +82,19 @@ public class CtrLevelUpMenu : MonoBehaviour
             }
             else
             {
-                skillnum = 3 + (int)Time.time % 2;
+                skillnum = 3 + (int)(Random.value * 2) % 2;
             }
         }
+    }
+    public int GetOtherNum()
+    {
+        return (int)(Random.value * 2) % 2;
+    }
+    IEnumerator waitforchoose(float time)
+    {
+        yield return new WaitForSecondsRealtime(time);
+        MadeChoice();
+        GetSkillNum();
     }
 
     void Update()

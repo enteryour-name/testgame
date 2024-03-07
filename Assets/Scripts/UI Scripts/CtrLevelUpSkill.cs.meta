@@ -10,6 +10,12 @@ MonoImporter:
   - skill23: {fileID: 21300000, guid: 6847bafe072fd1943abc2fbd61dd97d6, type: 3}
   - skill24: {fileID: 21300000, guid: c7d7154f8763d144d8d7f979f1679a19, type: 3}
   - skill25: {fileID: 21300000, guid: eb8f196590e466949b8f35cf204169ed, type: 3}
+  - FATK3: {instanceID: 0}
+  - FATK4: {instanceID: 0}
+  - FATK5: {instanceID: 0}
+  - LATK3: {instanceID: 0}
+  - LATK4: {instanceID: 0}
+  - LATK5: {instanceID: 0}
   - image: {instanceID: 0}
   - ctrGenerateCharacter: {instanceID: 0}
   - ctrLevelUpMenu: {instanceID: 0}

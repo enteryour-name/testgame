@@ -2,7 +2,9 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Mail;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CtrGenerateCharacter : MonoBehaviour
 {
@@ -25,6 +27,10 @@ public class CtrGenerateCharacter : MonoBehaviour
             character2.SetActive(false);
             FireSkillUI.SetActive(true);
             LeafSkillUI.SetActive(false);
+            foreach(Image im in FireSkillUI.transform.GetComponentsInChildren<Image>())
+            {
+                im.gameObject.SetActive(false);
+            }
         }
         else if (receivevalue == 2)
         {
@@ -33,6 +39,10 @@ public class CtrGenerateCharacter : MonoBehaviour
             character2.SetActive(true);
             FireSkillUI.SetActive(false);
             LeafSkillUI.SetActive(true);
+            foreach (Image im in LeafSkillUI.transform.GetComponentsInChildren<Image>())
+            {
+                im.gameObject.SetActive(false);
+            }
         }
         camera.LookAt = character.transform;
         camera.Follow = character.transform;
@@ -44,6 +54,7 @@ public class CtrGenerateCharacter : MonoBehaviour
     public int Refreshtime = 0;
     public void Refresh()
     {
+        
         camera = GameObject.FindObjectOfType<CinemachineVirtualCamera>();
         if(character1 == null)
         {
