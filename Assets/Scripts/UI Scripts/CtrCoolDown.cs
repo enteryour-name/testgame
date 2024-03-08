@@ -15,6 +15,7 @@ public class CtrCoolDown : MonoBehaviour
     public Touching touching;
     public GameObject character1;
     public GameObject character2;
+    public Animator Animator;
     private bool iscooldown = false;
     public float skill = 15;
     private bool isskill(float skillnumber)
@@ -38,10 +39,12 @@ public class CtrCoolDown : MonoBehaviour
         if(10f<skill&& skill<20f)
         {
             touching = character1.GetComponent<Touching>();
+            Animator = character1.GetComponent<Animator>();
         }
         else
         {
             touching=character2.GetComponent<Touching>();
+            Animator=character2.GetComponent<Animator>();
         }
     }
     IEnumerator WaitForSeconds(float time)
@@ -64,10 +67,21 @@ public class CtrCoolDown : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if(isskill(skill) && touching.IsGround) 
+    { 
+        if(skill > 20)
         {
-            IntoCoolDown();
+            if(isskill(skill) && touching.IsGround && Animator.GetCurrentAnimatorStateInfo(0).IsName($"Attack{skill-19}")) 
+            {
+                 IntoCoolDown();
+            }
         }
+        else if(10< skill && skill<20)
+        {
+            if (isskill(skill) && touching.IsGround && Animator.GetCurrentAnimatorStateInfo(0).IsName($"Attack{skill - 10}"))
+            {
+                IntoCoolDown();
+            }
+        }
+
     }
 }

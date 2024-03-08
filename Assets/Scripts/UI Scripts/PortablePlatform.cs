@@ -11,6 +11,7 @@ public class PortablePlatform : MonoBehaviour
     public float amplitude;
     public float speed;
     public float start;
+    private float startoffset;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,6 @@ public class PortablePlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position =startPos +new Vector3 (amplitude * Mathf.Sin(speed * (Time.time-startTime) + start) ,0,0);
+        transform.position =startPos +new Vector3 (amplitude * Mathf.Sin((0.8f*speed+0.5f * startoffset) * (Time.time-startTime) + start) ,0,0);
     }
 }
