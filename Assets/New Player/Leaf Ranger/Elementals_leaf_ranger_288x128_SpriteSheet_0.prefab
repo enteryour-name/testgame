@@ -484,6 +484,7 @@ GameObject:
   - component: {fileID: 6286748489594957778}
   - component: {fileID: 2284258079561394948}
   - component: {fileID: 4657045321270278322}
+  - component: {fileID: 3553150120147884294}
   - component: {fileID: 2920366836815462069}
   - component: {fileID: 1976969763877769329}
   - component: {fileID: 781514458470251130}
@@ -676,6 +677,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &3553150120147884294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9056845513384046710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2995d8cbc964c094f927cf72678e61df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enterBlock: {fileID: 0}
+  lastEnemies:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  returnPos: {x: 62, y: -29, z: 0}
 --- !u!114 &2920366836815462069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1063,9 +1082,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e6c09f5779072c40a962fee96a7f1ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canskill3: 1
-  canskill4: 1
-  canskill5: 1
+  canskill3: 0
+  canskill4: 0
+  canskill5: 0
 --- !u!1001 &892288802027828761
 PrefabInstance:
   m_ObjectHideFlags: 0
