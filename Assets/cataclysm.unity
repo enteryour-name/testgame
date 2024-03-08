@@ -2504,29 +2504,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3095978069053751379, guid: d0a7cfb05dfd1bd4d8d98e8c1a7f9ebd, type: 3}
-      propertyPath: walkspeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3857376115989685579, guid: d0a7cfb05dfd1bd4d8d98e8c1a7f9ebd, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 342994d81e7d9b44b82e9fe978c28c95, type: 2}
-    - target: {fileID: 5877071200790391274, guid: d0a7cfb05dfd1bd4d8d98e8c1a7f9ebd, type: 3}
-      propertyPath: isInvincible
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5877071200790391274, guid: d0a7cfb05dfd1bd4d8d98e8c1a7f9ebd, type: 3}
-      propertyPath: invincibilityTimer
-      value: 0.05
-      objectReference: {fileID: 0}
     - target: {fileID: 7070404986079621453, guid: d0a7cfb05dfd1bd4d8d98e8c1a7f9ebd, type: 3}
       propertyPath: m_Name
       value: monster2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7070404986079621453, guid: d0a7cfb05dfd1bd4d8d98e8c1a7f9ebd, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
