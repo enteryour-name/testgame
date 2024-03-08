@@ -7,6 +7,7 @@ public class TriggerSettings : MonoBehaviour
 {
     public GameObject enterBlock;
     public GameObject[] lastEnemies;
+    public Vector3 returnPos= new Vector3(62,-29,0);
     public void EnterTrigger()
     {
         enterBlock.SetActive(false);
@@ -20,7 +21,7 @@ public class TriggerSettings : MonoBehaviour
     }
     public void AntiDrop()
     {
-        transform.position = new Vector3(62, -29, 0);
+        transform.position = returnPos;
         GetComponent<Damageable>().Health -= 10;
     }
     private void OnTriggerEnter2D(Collider2D other)
