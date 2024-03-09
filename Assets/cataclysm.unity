@@ -628,7 +628,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 935208444dd280e48a48369279459b08, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.02
+  m_Volume: 0.015
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -738,7 +738,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b3b69b83009d5704aa52301f5c8175dd, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.02
+  m_Volume: 0.015
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3516,7 +3516,7 @@ MonoBehaviour:
   character2: {fileID: 1253035253}
   character: {fileID: 0}
   commu: {fileID: 0}
-  defaultvalue: 2
+  defaultvalue: 1
   receivevalue: 0
   camera: {fileID: 1878382877}
   FireSkillUI: {fileID: 1265613695}
@@ -8325,7 +8325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9056845513384046710, guid: 1a3f3c136d14dc148ad006ea100bc166, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8552,10 +8552,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2436516714626737571, guid: 9e5418c9a5d3bde48bbcaa7b95724134, type: 3}
-      propertyPath: _hastarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2436516714626737571, guid: 9e5418c9a5d3bde48bbcaa7b95724134, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 1831989732}
@@ -8574,10 +8570,6 @@ PrefabInstance:
     - target: {fileID: 8341976745350347341, guid: 9e5418c9a5d3bde48bbcaa7b95724134, type: 3}
       propertyPath: m_Name
       value: Flyenemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 8341976745350347341, guid: 9e5418c9a5d3bde48bbcaa7b95724134, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8424004655588014231, guid: 9e5418c9a5d3bde48bbcaa7b95724134, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8687,10 +8679,6 @@ PrefabInstance:
     - target: {fileID: 7856343233450960504, guid: 34e21394a2774774d8c439379cf7692c, type: 3}
       propertyPath: m_Name
       value: Bat
-      objectReference: {fileID: 0}
-    - target: {fileID: 7856343233450960504, guid: 34e21394a2774774d8c439379cf7692c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8209285128906428868, guid: 34e21394a2774774d8c439379cf7692c, type: 3}
       propertyPath: waypoints.Array.data[0]
