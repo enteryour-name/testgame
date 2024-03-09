@@ -16,6 +16,7 @@ public class PortablePlatform : MonoBehaviour
     public Transform player;
     public Transform platform;
     public Transform enemy;
+    public Transform enemy2;
     public Rigidbody2D rigidbody2;
     public CtrGenerateCharacter ctrGenerateCharacter;
     public GameObject character1;
@@ -53,6 +54,12 @@ public class PortablePlatform : MonoBehaviour
         {
 
             enemy.transform.position += new Vector3(amplitude * Mathf.Cos((0.8f * speed + 0.5f * startoffset) * (Time.time - startTime) + start), 0, 0) * Time.deltaTime;
+
+        }
+        if (collision.CompareTag("Enemy2"))
+        {
+
+            enemy2.transform.position += new Vector3(amplitude * Mathf.Cos((0.8f * speed + 0.5f * startoffset) * (Time.time - startTime) + start), 0, 0) * Time.deltaTime;
 
         }
 

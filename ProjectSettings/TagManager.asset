@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Enemy2
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - PlayerHitbox
   - EnemyHitBox
   - GroundDitection
-  - 
+  - Flyenemy
   - 
   - 
   - 
@@ -41,4 +42,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Flyenemy
+    uniqueID: 3328483839
+    locked: 0
+  - name: Ground
+    uniqueID: 902195771
     locked: 0

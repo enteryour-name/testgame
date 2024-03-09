@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 8859054919749869548}
   - component: {fileID: 3454868408698015739}
   - component: {fileID: 2436516714626737571}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Flyenemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,8 +259,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -966483457
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 173093948, guid: f8fc7ea1d3e3b9d45a419e1c65ce70cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -420,7 +420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   flyditectionzone: {fileID: 1352288728325786452}
-  _hastarget: 1
+  _hastarget: 0
   waypoints:
   - {fileID: 0}
   - {fileID: 0}

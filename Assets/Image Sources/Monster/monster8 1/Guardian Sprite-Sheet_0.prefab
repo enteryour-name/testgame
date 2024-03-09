@@ -394,11 +394,11 @@ GameObject:
   - component: {fileID: 1352986185663704333}
   m_Layer: 8
   m_Name: Guardian Sprite-Sheet_0
-  m_TagString: Untagged
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5896940807525898005
 Transform:
   m_ObjectHideFlags: 0

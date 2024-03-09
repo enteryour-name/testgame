@@ -4157,6 +4157,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1305138595}
   m_CullTransparentMesh: 1
+--- !u!4 &1330438528 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5896940807525898005, guid: 554452049fff1c7429f13746a6487192, type: 3}
+  m_PrefabInstance: {fileID: 734593051161163298}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1364119697
 GameObject:
   m_ObjectHideFlags: 0
@@ -7833,29 +7838,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3065983403783901222, guid: d0a7cfb05dfd1bd4d8d98e8c1a7f9ebd, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 3065983403783901222, guid: d0a7cfb05dfd1bd4d8d98e8c1a7f9ebd, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 3095978069053751379, guid: d0a7cfb05dfd1bd4d8d98e8c1a7f9ebd, type: 3}
-      propertyPath: walkspeed
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 7070404986079621453, guid: d0a7cfb05dfd1bd4d8d98e8c1a7f9ebd, type: 3}
       propertyPath: m_Name
       value: monster2
       objectReference: {fileID: 0}
     - target: {fileID: 7070404986079621453, guid: d0a7cfb05dfd1bd4d8d98e8c1a7f9ebd, type: 3}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7070404986079621453, guid: d0a7cfb05dfd1bd4d8d98e8c1a7f9ebd, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7872,11 +7861,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5896940807525898005, guid: 554452049fff1c7429f13746a6487192, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.49
+      value: -0.39
       objectReference: {fileID: 0}
     - target: {fileID: 5896940807525898005, guid: 554452049fff1c7429f13746a6487192, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.54
+      value: 8.44
       objectReference: {fileID: 0}
     - target: {fileID: 5896940807525898005, guid: 554452049fff1c7429f13746a6487192, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8531,6 +8520,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 588371019}
     - target: {fileID: 7169278750414369391, guid: acd9f74a8e81ac0448b2a63ff0bb3e9e, type: 3}
+      propertyPath: enemy2
+      value: 
+      objectReference: {fileID: 1330438528}
+    - target: {fileID: 7169278750414369391, guid: acd9f74a8e81ac0448b2a63ff0bb3e9e, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 240519010}
@@ -8552,10 +8545,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2436516714626737571, guid: 9e5418c9a5d3bde48bbcaa7b95724134, type: 3}
-      propertyPath: _hastarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2436516714626737571, guid: 9e5418c9a5d3bde48bbcaa7b95724134, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 1831989732}
@@ -8575,17 +8564,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flyenemy
       objectReference: {fileID: 0}
-    - target: {fileID: 8341976745350347341, guid: 9e5418c9a5d3bde48bbcaa7b95724134, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8424004655588014231, guid: 9e5418c9a5d3bde48bbcaa7b95724134, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.8
+      value: -3.58
       objectReference: {fileID: 0}
     - target: {fileID: 8424004655588014231, guid: 9e5418c9a5d3bde48bbcaa7b95724134, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.6
+      value: 8.08
       objectReference: {fileID: 0}
     - target: {fileID: 8424004655588014231, guid: 9e5418c9a5d3bde48bbcaa7b95724134, type: 3}
       propertyPath: m_LocalPosition.z
