@@ -40,16 +40,20 @@ public class PortablePlatform : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if ((true))
-        {
-            
-        }
+        
 
         if (collision.CompareTag("Player"))
         {
             
-            player.transform.position -= new Vector3(amplitude * Mathf.Sin((0.8f * speed + 0.5f * startoffset) * (Time.time - startTime) + start), 0, 0)*Time.deltaTime;
+            player.transform.position += new Vector3(amplitude * Mathf.Cos((0.8f * speed + 0.5f * startoffset) * (Time.time - startTime) + start), 0, 0)*Time.deltaTime;
            
         }
+        else if(collision.CompareTag("Enemy"))
+        {
+
+            player.transform.position += new Vector3(amplitude * Mathf.Cos((0.8f * speed + 0.5f * startoffset) * (Time.time - startTime) + start), 0, 0) * Time.deltaTime;
+
+        }
     }
+    
 }
