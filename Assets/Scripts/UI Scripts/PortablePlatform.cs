@@ -15,6 +15,7 @@ public class PortablePlatform : MonoBehaviour
     public Vector2 vec;
     public Transform player;
     public Transform platform;
+    public Transform enemy;
     public Rigidbody2D rigidbody2;
     public CtrGenerateCharacter ctrGenerateCharacter;
     public GameObject character1;
@@ -45,15 +46,17 @@ public class PortablePlatform : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             
-            player.transform.position += new Vector3(amplitude * Mathf.Cos((0.8f * speed + 0.5f * startoffset) * (Time.time - startTime) + start), 0, 0)*Time.deltaTime;
+            character1.transform.position += new Vector3(amplitude * Mathf.Cos((0.8f * speed + 0.5f * startoffset) * (Time.time - startTime) + start), 0, 0)*Time.deltaTime;
            
         }
-        else if(collision.CompareTag("Enemy"))
+        if (collision.CompareTag("Enemy"))
         {
 
-            player.transform.position += new Vector3(amplitude * Mathf.Cos((0.8f * speed + 0.5f * startoffset) * (Time.time - startTime) + start), 0, 0) * Time.deltaTime;
+            enemy.transform.position += new Vector3(amplitude * Mathf.Cos((0.8f * speed + 0.5f * startoffset) * (Time.time - startTime) + start), 0, 0) * Time.deltaTime;
 
         }
+
+
     }
     
 }
