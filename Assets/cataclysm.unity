@@ -152,9 +152,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 935208444dd280e48a48369279459b08, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   introsource: {fileID: 99094397}
-  loopsource: {fileID: 0}
+  loopsource: {fileID: 99094395}
 --- !u!82 &99094397
 AudioSource:
   m_ObjectHideFlags: 0
@@ -262,9 +262,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: b3b69b83009d5704aa52301f5c8175dd, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -717,7 +717,7 @@ Transform:
   m_GameObject: {fileID: 588842058}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.89, y: 7.52, z: -10}
+  m_LocalPosition: {x: -11.8, y: 6.6, z: -10}
   m_LocalScale: {x: 0.9970095, y: 0.9970095, z: 0.9970095}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1242,8 +1242,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 240519010}
-  m_Follow: {fileID: 240519010}
+  m_LookAt: {fileID: 702257721}
+  m_Follow: {fileID: 702257721}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5.561083
@@ -1272,7 +1272,7 @@ Transform:
   m_GameObject: {fileID: 1878382875}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.89, y: 7.52, z: -10}
+  m_LocalPosition: {x: -11.8, y: 6.6, z: -10}
   m_LocalScale: {x: 0.79462975, y: 0.79462975, z: 0.79462975}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2689,7 +2689,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9002870284700152148, guid: 766781cf10b86ca4d84c8a999c47c217, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2747,6 +2747,10 @@ PrefabInstance:
     - target: {fileID: 7070404986079621453, guid: d0a7cfb05dfd1bd4d8d98e8c1a7f9ebd, type: 3}
       propertyPath: m_Name
       value: monster2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7070404986079621453, guid: d0a7cfb05dfd1bd4d8d98e8c1a7f9ebd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2807,7 +2811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8552282586540429451, guid: 554452049fff1c7429f13746a6487192, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2865,6 +2869,10 @@ PrefabInstance:
     - target: {fileID: 7911505133450699419, guid: 1bfa1505467fa2741af94c4b24691f03, type: 3}
       propertyPath: m_Name
       value: monster1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7911505133450699419, guid: 1bfa1505467fa2741af94c4b24691f03, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2980,6 +2988,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goblin
       objectReference: {fileID: 0}
+    - target: {fileID: 7110792582680143945, guid: f8a5c6eea6737aa4da8d08ab01e37d66, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3083,7 +3095,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2800725656038063988, guid: d5fa393c66e09ff479a778b60cdc7b82, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800725656038063988, guid: d5fa393c66e09ff479a778b60cdc7b82, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6285423956553533463, guid: d5fa393c66e09ff479a778b60cdc7b82, type: 3}
       propertyPath: m_Enabled
@@ -3222,7 +3238,7 @@ PrefabInstance:
     - target: {fileID: 5076202502655982884, guid: fa7f39a7af544b640b76b900bb8f77f2, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 702257721}
+      objectReference: {fileID: 240519010}
     - target: {fileID: 5076202502655982884, guid: fa7f39a7af544b640b76b900bb8f77f2, type: 3}
       propertyPath: attackzone
       value: 
@@ -3234,6 +3250,10 @@ PrefabInstance:
     - target: {fileID: 7192434652225909216, guid: fa7f39a7af544b640b76b900bb8f77f2, type: 3}
       propertyPath: m_Name
       value: superboss
+      objectReference: {fileID: 0}
+    - target: {fileID: 7192434652225909216, guid: fa7f39a7af544b640b76b900bb8f77f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8595648012127134873, guid: fa7f39a7af544b640b76b900bb8f77f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3494,6 +3514,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat
       objectReference: {fileID: 0}
+    - target: {fileID: 7856343233450960504, guid: 34e21394a2774774d8c439379cf7692c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8209285128906428868, guid: 34e21394a2774774d8c439379cf7692c, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
@@ -3518,6 +3542,10 @@ PrefabInstance:
     - target: {fileID: 1258493600043244244, guid: 897030428619acb49bf1bbbb8f40fa38, type: 3}
       propertyPath: m_Name
       value: AcientKnight
+      objectReference: {fileID: 0}
+    - target: {fileID: 1258493600043244244, guid: 897030428619acb49bf1bbbb8f40fa38, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4659376485006320546, guid: 897030428619acb49bf1bbbb8f40fa38, type: 3}
       propertyPath: m_LocalPosition.x

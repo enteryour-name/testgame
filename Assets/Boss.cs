@@ -210,7 +210,7 @@ public class Boss : MonoBehaviour
 
 
 
-        if (boss.transform.position.x - player.transform.position.x > 2f || boss.transform.position.x - player.transform.position.x < -2f)
+        if ((boss.transform.position.x - player.transform.position.x) > 1f || (boss.transform.position.x - player.transform.position.x )< -1f)
         {
           
             
