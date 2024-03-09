@@ -6,10 +6,10 @@ using UnityEngine.InputSystem;
 public class Firecontrol : MonoBehaviour
 {
     public float rollrate = 20f;
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
     Animator animator;
     public float walkspeed = 10f;
-    Vector2 moveInput;
+   public Vector2 moveInput;
     Touching touching;
     Damageable damageable;
     

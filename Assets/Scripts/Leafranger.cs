@@ -9,9 +9,9 @@ public class Leafranger : MonoBehaviour
     public float fastspeed=20f;
     public float normalspeed = 10f;
     public float rollrate = 20f;
-    Rigidbody2D rb;
+   public Rigidbody2D rb;
     Animator animator;
-    Vector2 moveInput;
+    public Vector2 moveInput;
     Touching touching;
     Damageable damageable;
     
