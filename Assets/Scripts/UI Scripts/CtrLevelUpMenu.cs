@@ -13,6 +13,7 @@ public class CtrLevelUpMenu : MonoBehaviour
     public CtrSkill ctrSkill;
     public int skillnum;
     public GameObject arrowprefab;
+    public float damageUp = 0;
     public void DamageUp()
     {
         monster2Attack = character.GetComponentsInChildren<Monster2Attack>();
@@ -23,12 +24,13 @@ public class CtrLevelUpMenu : MonoBehaviour
         arrowprefab.GetComponent<newbullet>().damage = (int)((float)arrowprefab.GetComponent<newbullet>().damage * damageUpTime);
         MadeChoice();
         GetSkillNum();
+        damageUp++;
     }
     public void HealthUp()
     {
         damageable.Maxhealth += 50f;
         character.GetComponent<CtrPlayerHealth>().RefreshMax();
-        damageable.Health += 50f;       
+        damageable.Health += 50f;
         MadeChoice();
         GetSkillNum();
     }
@@ -50,7 +52,8 @@ public class CtrLevelUpMenu : MonoBehaviour
     }
     private void Start()
     {
-
+        for(float i =damageUp;i>0;i--)
+            DamageUp();
         character = ctrGenerateCharacter.character;
         damageable = character.GetComponent<Damageable>();
         ctrSkill = character.GetComponent<CtrSkill>();
@@ -96,10 +99,4 @@ public class CtrLevelUpMenu : MonoBehaviour
         MadeChoice();
         GetSkillNum();
     }
-
-    void Update()
-    {
-        
-    }
-
 }
