@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Net.Mail;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CtrGenerateCharacter : MonoBehaviour
@@ -18,6 +19,12 @@ public class CtrGenerateCharacter : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera camera;
     public GameObject FireSkillUI;
     public GameObject LeafSkillUI;
+    public StorageData storageData;
+    public bool haveAwake = false;
+    public CtrExpLevel expLevel;
+    public CtrLevelUpMenu levelUpMenu;
+    public int Round;
+    public CtrLevelUpSkill ctrLevelUpSkill;
     void generate()
     {
         if (receivevalue == 1)
@@ -49,7 +56,7 @@ public class CtrGenerateCharacter : MonoBehaviour
     }
     void Awake()
     {
-        Refresh();
+        StartBeforeEvery();
     }
     public int Refreshtime = 0;
     public void Refresh()
@@ -74,13 +81,37 @@ public class CtrGenerateCharacter : MonoBehaviour
         {
             receivevalue = commu.character;
         }
+        if (Round != 1)
+            receivevalue = PlayerPrefs.GetInt("character");
         generate();
         Refreshtime++;
     }
-
-    // Update is called once per frame
-    void Update()
+    public void StartBeforeEvery()
     {
-        
+        if (!haveAwake)
+        {
+            Refresh();
+            if (Round != 1)
+                Load();
+            haveAwake = true;
+            ctrLevelUpSkill.enabled = true;
+            ctrLevelUpSkill.SetSkillsUI();
+            ctrLevelUpSkill.SetSkillsUI();
+            ctrLevelUpSkill.SetSkillsUI();
+            ctrLevelUpSkill.enabled = false;
+        }
+    }
+    public void Load()
+    {
+        character.GetComponent<CtrSkill>().enabled = true;
+        expLevel.exp = PlayerPrefs.GetFloat("exp");
+        expLevel.level = PlayerPrefs.GetInt("level");
+        levelUpMenu.damageUp = PlayerPrefs.GetFloat("DamageUp");
+        character.GetComponent<CtrSkill>().canskill3 = PlayerPrefs.GetFloat("skill3") == 1;
+        character.GetComponent<CtrSkill>().canskill4 = PlayerPrefs.GetFloat("skill4") == 1;
+        character.GetComponent<CtrSkill>().canskill5 = PlayerPrefs.GetFloat("skill5") == 1;
+        character.GetComponent<Damageable>().Maxhealth = PlayerPrefs.GetFloat("maxHealth");
+        character.GetComponent<Damageable>().Health = PlayerPrefs.GetFloat("health");
+        character.GetComponent<CtrSkill>().refresh();
     }
 }

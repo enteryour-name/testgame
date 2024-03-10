@@ -36,6 +36,7 @@ public class CtrMonsterHealth : MonoBehaviour
         rigidbody2D = GetComponent<Rigidbody2D>();
         wholetransform = wholehealthbar.GetComponent<Transform>();
         wholetransform.localPosition = new Vector3(0, offset, 0);
+        Debug.Log(wholetransform.localPosition);
     }
         // Update is called once per frame
         void Update()

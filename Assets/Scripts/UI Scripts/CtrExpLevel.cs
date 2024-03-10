@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CtrExpLevel : MonoBehaviour
@@ -18,10 +19,8 @@ public class CtrExpLevel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(ctrGenerateCharacter.Refreshtime == 0)
-        {
-            ctrGenerateCharacter.Refresh();
-        }
+        ctrGenerateCharacter.StartBeforeEvery();
+        LvText.text = $"Lv.{level}";
         LevelUpMenu.SetActive(false);
         character = ctrGenerateCharacter.character;
         damageable = character.GetComponent<Damageable>();

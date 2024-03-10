@@ -9,13 +9,15 @@ public class CtrSkill : MonoBehaviour
     public bool canskill5 = false;
     private Animator animator;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         refresh();
     }
-    void refresh()
+    public void refresh()
     {
         animator = GetComponent<Animator>();
+        if(canskill4)
+            Debug.Log("SkillRefresh");
         animator.SetBool("canattack3", canskill3);
         animator.SetBool("canattack4", canskill4);
         animator.SetBool("canattack5", canskill5);

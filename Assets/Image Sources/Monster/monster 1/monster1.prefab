@@ -207,8 +207,8 @@ Transform:
   m_GameObject: {fileID: 3338629270016392832}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: 0.99, z: 0}
-  m_LocalScale: {x: 0.45132405, y: 0.46336374, z: 1.026272}
+  m_LocalPosition: {x: 2.0044, y: 1.5134, z: 0}
+  m_LocalScale: {x: 0.35899317, y: 0.20281167, z: 0.51829815}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5583874975893957587}
@@ -242,8 +242,8 @@ Transform:
   m_GameObject: {fileID: 6254219410556125005}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.06992648, y: 2.2263582, z: 0}
-  m_LocalScale: {x: 0.9223337, y: 0.8598337, z: 1.4479324}
+  m_LocalPosition: {x: 0.06992648, y: 2.1937, z: 0}
+  m_LocalScale: {x: 1, y: 0.7308587, z: 1.4479324}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7739972071699290320}
@@ -390,6 +390,7 @@ GameObject:
   - component: {fileID: 6236486033105851825}
   - component: {fileID: 3495738451992679162}
   - component: {fileID: 7463563915710873224}
+  - component: {fileID: 944571848939402350}
   - component: {fileID: 8635577996761604506}
   - component: {fileID: 3481529107037805967}
   - component: {fileID: 6353308902574526580}
@@ -533,6 +534,21 @@ CapsuleCollider2D:
   m_Offset: {x: -0.13566469, y: -0.37182295}
   m_Size: {x: 2.1239161, y: 4.495535}
   m_Direction: 0
+--- !u!114 &944571848939402350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7911505133450699419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b017c96b3b71bce469dc6e2c4a428571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageable: {fileID: 7097202777116062681}
+  ctrExpLevel: {fileID: 0}
+  exp: 50
 --- !u!114 &8635577996761604506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -547,11 +563,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 0
   health: 0
-  healthbarobj: {fileID: 0}
-  wholehealthbar: {fileID: 0}
+  healthbarobj: {fileID: 9222467635810279047}
+  wholehealthbar: {fileID: 3338629270016392832}
   pos: {x: 0, y: 0, z: 0}
   wholetransform: {fileID: 0}
-  offset: 1.2
+  offset: 1.5
 --- !u!114 &3481529107037805967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -766,8 +782,8 @@ Transform:
   m_GameObject: {fileID: 9222467635810279047}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.93, y: 1.9988, z: 0}
-  m_LocalScale: {x: 0.91357154, y: 0.75794256, z: 1.4479324}
+  m_LocalPosition: {x: -2.93, y: 1.9995, z: 0}
+  m_LocalScale: {x: 0.91357154, y: 0.44077912, z: 1.4479324}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7739972071699290320}

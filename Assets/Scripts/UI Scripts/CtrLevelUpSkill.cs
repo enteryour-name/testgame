@@ -1,5 +1,7 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -48,6 +50,7 @@ public class CtrLevelUpSkill : MonoBehaviour
     }
     private void Start()
     {
+        ctrGenerateCharacter.StartBeforeEvery();
         haveset = false;
         image = GetComponent<Image>();
         character = ctrGenerateCharacter.character;
@@ -55,19 +58,23 @@ public class CtrLevelUpSkill : MonoBehaviour
     }
     public void Update()
     {
-        if(!haveset)
+        SetSkillsUI();
+    }
+    public void SetSkillsUI()
+    {
+        if (!haveset)
         {
-            if(ctrSkill.canskill3 && !haveset1)
+            if (ctrSkill.canskill3 && !haveset1)
             {
-                if(ctrGenerateCharacter.receivevalue ==1)
-                {                    
+                if (ctrGenerateCharacter.receivevalue == 1)
+                {
                     FATK3.SetActive(true);
                     haveset = true;
                     haveset1 = true;
                 }
                 else
                 {
-                    LATK3.SetActive(true) ;
+                    LATK3.SetActive(true);
                     haveset = true;
                     haveset1 = true;
                 }
@@ -103,9 +110,7 @@ public class CtrLevelUpSkill : MonoBehaviour
                 }
             }
         }
-
     }
-        
         
     
 }

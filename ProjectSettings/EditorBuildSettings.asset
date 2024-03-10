@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/cataclysm.unity
     guid: fbbe93a55fd5a4a4f947419f8a54eca1
+  - enabled: 1
+    path: Assets/Scenes/SecondRound.unity
+    guid: 917ed79fa4365b4478aa3ffdeb04cd07
   m_configObjects: {}

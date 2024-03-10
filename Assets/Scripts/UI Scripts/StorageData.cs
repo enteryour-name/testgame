@@ -17,7 +17,7 @@ public class StorageData : MonoBehaviour
         GameObject character = ctrGenerateCharacter.character;
         character.GetComponent<CtrSkill>().enabled = true;
         PlayerPrefs.SetInt("character",ctrGenerateCharacter.receivevalue);
-        PlayerPrefs.SetString("Round",SceneManager.GetActiveScene().name);
+        PlayerPrefs.SetString("Round",$"Round{ctrGenerateCharacter.Round}");
         PlayerPrefs.SetFloat("exp", expLevel.exp);
         PlayerPrefs.SetInt("level", expLevel.level);
         PlayerPrefs.SetFloat("DamageUp", levelUpMenu.damageUp);
@@ -43,7 +43,7 @@ public class StorageData : MonoBehaviour
         character.GetComponent<CtrSkill>().canskill5 = PlayerPrefs.GetFloat("skill5") == 1;
         character.GetComponent<Damageable>().Maxhealth = PlayerPrefs.GetFloat("maxHealth");
         character.GetComponent<Damageable>().Health = PlayerPrefs.GetFloat("health");
-        
+    
     }
     // Update is called once per frame
     void Update()
