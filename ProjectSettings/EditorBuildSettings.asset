@@ -6,21 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/MainPage.unity
+    guid: d2e9b7cfaa951da4495e1092c36b389f
   - enabled: 1
     path: Assets/Scenes/characterchoosing.unity
     guid: f588618a69355cc45ab54f5e72d7524c
   - enabled: 1
-    path: Assets/Scenes/MainPage.unity
-    guid: d2e9b7cfaa951da4495e1092c36b389f
-  - enabled: 1
-    path: Assets/Scenes/First round.unity
+    path: Assets/Scenes/Round1.unity
     guid: 36fa6acc7ba6ef64b9898ff7e3170726
-  - enabled: 1
+  - enabled: 0
     path: Assets/cataclysm.unity
     guid: fbbe93a55fd5a4a4f947419f8a54eca1
   - enabled: 1
-    path: Assets/Scenes/SecondRound.unity
+    path: Assets/Scenes/Round2.unity
     guid: 917ed79fa4365b4478aa3ffdeb04cd07
+  - enabled: 1
+    path: Assets/Scenes/Boss.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

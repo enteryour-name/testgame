@@ -11,7 +11,7 @@ public class CtrExpLevel : MonoBehaviour
     public RectTransform TargetExpBar;
     public float exp = 0;
     public int level = 1;
-    public float[] maxexp = {0,100,120,160,250,400,10000};
+    public float[] maxexp = {0,100,120,160,200,250,400,10000};
     public Damageable damageable;
     public GameObject LevelUpMenu;
 [SerializeField]    private GameObject character;
@@ -44,7 +44,7 @@ public class CtrExpLevel : MonoBehaviour
     }
     private void Update()
     {
-        if(level <= 5)
+        if(level <= 6)
         {
             Normal();
         }

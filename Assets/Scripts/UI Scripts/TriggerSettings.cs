@@ -7,7 +7,8 @@ using UnityEngine;
 public class TriggerSettings : MonoBehaviour
 {
     public GameObject enterBlock;
-    public GameObject enterBlock2;
+    public GameObject trap;
+    public GameObject[] trapEnemies;
     public GameObject[] lastEnemies;
     public GameObject enterTriggers;
     public GameObject enterTriggers1;
@@ -19,10 +20,6 @@ public class TriggerSettings : MonoBehaviour
     public void EnterTrigger()
     {
         enterBlock.SetActive(false);
-    }
-    public void EnterTrigger2()
-    {
-        enterBlock2.SetActive(false);
     }
     public void LastTrigger()
     {
@@ -46,6 +43,15 @@ public class TriggerSettings : MonoBehaviour
         transform.position = returnPos3;
         GetComponent<Damageable>().Health -= 10;
     }
+    public void Trap()
+    {
+        foreach (GameObject monster in trapEnemies)
+        {
+            monster.SetActive(true);
+        }
+        trap.SetActive(true);
+        StartCoroutine(WaitTrap());
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.name == "EnterTrigger")
@@ -60,10 +66,6 @@ public class TriggerSettings : MonoBehaviour
         {
             AntiDrop();
         }
-        else if( other.name == "EnterTrigger (1)")
-        {
-            EnterTrigger2();
-        }
         else if(other.name =="AntiDrop (1)")
         {
             AntiDrop2();
@@ -72,5 +74,14 @@ public class TriggerSettings : MonoBehaviour
         {
             AntiDrop3();
         }
+        else if(other.name=="Trap")
+        {
+            Trap();
+        }
+    }
+    IEnumerator WaitTrap()
+    {
+        yield return new WaitForSeconds(20f);
+        trap.SetActive(false);
     }
 }

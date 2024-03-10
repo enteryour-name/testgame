@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class CtrMonsterExp : MonoBehaviour
 {
-    public Damageable damageable;
+    private Damageable damageable;
     public CtrExpLevel ctrExpLevel;
     public float exp;
     // Start is called before the first frame update
     void Start()
     {
+        damageable  = GetComponent<Damageable>();
     }
 
     // Update is called once per frame
@@ -19,7 +20,13 @@ public class CtrMonsterExp : MonoBehaviour
         if(damageable.Health <= 0)
         {
             ctrExpLevel.exp += exp;
-            Destroy(this.gameObject);
+            this.enabled = false;
+            StartCoroutine(Wait());
         }
+    }
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(1.5f);
+        Destroy(this.gameObject);
     }
 }

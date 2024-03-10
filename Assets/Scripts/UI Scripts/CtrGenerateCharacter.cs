@@ -113,5 +113,10 @@ public class CtrGenerateCharacter : MonoBehaviour
         character.GetComponent<Damageable>().Maxhealth = PlayerPrefs.GetFloat("maxHealth");
         character.GetComponent<Damageable>().Health = PlayerPrefs.GetFloat("health");
         character.GetComponent<CtrSkill>().refresh();
+        CtrSkillUI ctrSkillUI= levelUpMenu.GetComponent<CtrSkillUI>();
+        ctrSkillUI.ctrSkill = character.GetComponent<CtrSkill>();
+        ctrSkillUI.SetSkillsUI();
+        ctrSkillUI.SetSkillsUI();
+        ctrSkillUI.SetSkillsUI();
     }
 }

@@ -8,6 +8,14 @@ public class Damageable : MonoBehaviour
 {
     public UnityEvent<int, Vector2> damageableHit;
     Animator animator;
+    public void FixedUpdate()
+    {
+        if(transform.position.y < -70)
+        {
+            Isalive = false;
+            Health = -1;
+        }
+    }
     public float _maxhealth=100;
     public float Maxhealth
     {

@@ -14,7 +14,7 @@ public class PortablePlatform : MonoBehaviour
     private float startoffset;
     public Vector2 vec;
     public Transform player;
-    public Transform platform;
+    private Transform platform;
     public Transform enemy;
     public Transform enemy2;
     public Rigidbody2D rigidbody2;
@@ -25,6 +25,7 @@ public class PortablePlatform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        platform = GetComponent<Transform>();
         character1 = ctrGenerateCharacter.character;
         rb=character1.GetComponent<Rigidbody2D>();
         rigidbody2=GetComponent<Rigidbody2D>();

@@ -20,7 +20,7 @@ TagManager:
   - EnemyHitBox
   - GroundDitection
   - Flyenemy
-  - 
+  - Map
   - 
   - 
   - 
@@ -48,4 +48,10 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 902195771
+    locked: 0
+  - name: Map
+    uniqueID: 4237418811
+    locked: 0
+  - name: New Layer 4
+    uniqueID: 2389640087
     locked: 0

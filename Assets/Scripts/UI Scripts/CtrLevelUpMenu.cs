@@ -14,7 +14,6 @@ public class CtrLevelUpMenu : MonoBehaviour
     public int skillnum;
     public GameObject arrowprefab;
     public float damageUp = 0;
-    public StorageData storageData;
     public void DamageUp()
     {
         monster2Attack = character.GetComponentsInChildren<Monster2Attack>();
@@ -44,7 +43,7 @@ public class CtrLevelUpMenu : MonoBehaviour
             case 4: ctrSkill.canskill4 = true; break;
             case 5: ctrSkill.canskill5 = true; break;
         }
-        StartCoroutine(waitforchoose(0.5f));
+        StartCoroutine(waitforchoose(0.1f));
     }
     public void MadeChoice()
     {
@@ -55,7 +54,6 @@ public class CtrLevelUpMenu : MonoBehaviour
     {
         arrowprefab.GetComponent<newbullet>().damage = 10;
         ctrGenerateCharacter.StartBeforeEvery();
-        Time.timeScale = 0;
         character = ctrGenerateCharacter.character;
         damageable = character.GetComponent<Damageable>();
         ctrSkill = character.GetComponent<CtrSkill>();
@@ -63,7 +61,7 @@ public class CtrLevelUpMenu : MonoBehaviour
         {
             DamageUp();Debug.Log("DamageUp");
         }
-
+        
         GetSkillNum();
 
     }
@@ -106,5 +104,6 @@ public class CtrLevelUpMenu : MonoBehaviour
         yield return new WaitForSecondsRealtime(time);
         MadeChoice();
         GetSkillNum();
+        ctrSkill.enabled = false;
     }
 }

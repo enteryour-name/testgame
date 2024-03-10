@@ -16,12 +16,9 @@ public class CtrSkill : MonoBehaviour
     public void refresh()
     {
         animator = GetComponent<Animator>();
-        if(canskill4)
-            Debug.Log("SkillRefresh");
         animator.SetBool("canattack3", canskill3);
         animator.SetBool("canattack4", canskill4);
         animator.SetBool("canattack5", canskill5);
-        this.enabled = false;
     }
 
     // Update is called once per frame

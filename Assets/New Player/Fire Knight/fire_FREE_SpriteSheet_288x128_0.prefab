@@ -220,6 +220,7 @@ GameObject:
   - component: {fileID: 6863297046087988939}
   - component: {fileID: 8078654722087424627}
   - component: {fileID: 6285423956553533463}
+  - component: {fileID: 2622461280586023656}
   m_Layer: 7
   m_Name: fire_FREE_SpriteSheet_288x128_0
   m_TagString: Untagged
@@ -738,6 +739,40 @@ MonoBehaviour:
   _isalive: 1
   isInvincible: 0
   invincibilityTimer: 0.25
+--- !u!114 &2622461280586023656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2800725656038063988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2995d8cbc964c094f927cf72678e61df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enterBlock: {fileID: 0}
+  trap: {fileID: 0}
+  trapEnemies:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  lastEnemies:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  enterTriggers: {fileID: 0}
+  enterTriggers1: {fileID: 0}
+  lastTriggers: {fileID: 0}
+  antiDrops: {fileID: 0}
+  returnPos: {x: 62, y: -29, z: 0}
+  returnPos2: {x: 130, y: 8, z: 0}
+  returnPos3: {x: 150.3, y: 26.5, z: 0}
 --- !u!1 &5814357726266472991
 GameObject:
   m_ObjectHideFlags: 0
