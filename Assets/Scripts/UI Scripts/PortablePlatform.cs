@@ -15,6 +15,8 @@ public class PortablePlatform : MonoBehaviour
     public Vector2 vec;
     public Transform player;
     public Transform platform;
+    public Transform enemy;
+    public Transform enemy2;
     public Rigidbody2D rigidbody2;
     public CtrGenerateCharacter ctrGenerateCharacter;
     public GameObject character1;
@@ -40,16 +42,28 @@ public class PortablePlatform : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if ((true))
-        {
-            
-        }
+        
 
         if (collision.CompareTag("Player"))
         {
             
-            player.transform.position -= new Vector3(amplitude * Mathf.Sin((0.8f * speed + 0.5f * startoffset) * (Time.time - startTime) + start), 0, 0)*Time.deltaTime;
+            character1.transform.position += new Vector3(amplitude * Mathf.Cos((0.8f * speed + 0.5f * startoffset) * (Time.time - startTime) + start), 0, 0)*Time.deltaTime;
            
         }
+        if (collision.CompareTag("Enemy"))
+        {
+
+            enemy.transform.position += new Vector3(amplitude * Mathf.Cos((0.8f * speed + 0.5f * startoffset) * (Time.time - startTime) + start), 0, 0) * Time.deltaTime;
+
+        }
+        if (collision.CompareTag("Enemy2"))
+        {
+
+            enemy2.transform.position += new Vector3(amplitude * Mathf.Cos((0.8f * speed + 0.5f * startoffset) * (Time.time - startTime) + start), 0, 0) * Time.deltaTime;
+
+        }
+
+
     }
+    
 }

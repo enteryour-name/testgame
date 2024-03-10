@@ -21,6 +21,9 @@ public class Boss : MonoBehaviour
     private Vector2 walkDirectionVector = Vector2.right;
     public Transform player;
     public Transform boss;
+    public CtrGenerateCharacter ctrGenerateCharacter;
+    public GameObject character1;
+
 
 
     public WalkableDirection WalkDirection
@@ -76,7 +79,7 @@ public class Boss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        character1 = ctrGenerateCharacter.character;
     }
    public float attack2time = 5f;
     public float attack1time = 4f;
@@ -93,7 +96,7 @@ public class Boss : MonoBehaviour
 
         if (damageable.Health > 500) 
         {
-            if (randomvalue >= 5 && (boss.transform.position.x - player.transform.position.x) < 15f && (boss.transform.position.x - player.transform.position.x) > -15f)
+            if (randomvalue >= 5 && (boss.transform.position.x - character1.transform.position.x) < 15f && (boss.transform.position.x - character1.transform.position.x) > -15f)
             {
                 attack2time -= Time.deltaTime;
                 if (attack2time > 4f)
@@ -123,7 +126,7 @@ public class Boss : MonoBehaviour
 
             }
 
-            if (randomvalue < 5 &&randomvalue>=2&& (boss.transform.position.x - player.transform.position.x) < 15f && (boss.transform.position.x - player.transform.position.x) > -15f)
+            if (randomvalue < 5 &&randomvalue>=2&& (boss.transform.position.x - character1.transform.position.x) < 15f && (boss.transform.position.x - character1.transform.position.x) > -15f)
             {
                 attack1time -= Time.deltaTime;
                 if (attack1time > 3f)
@@ -151,7 +154,7 @@ public class Boss : MonoBehaviour
                     randomvalue = UnityEngine.Random.Range(0, 10);
                 }
             }
-            if(randomvalue < 2 && (boss.transform.position.x - player.transform.position.x) < 15f && (boss.transform.position.x - player.transform.position.x) > -15f)
+            if(randomvalue < 2 && (boss.transform.position.x - character1.transform.position.x) < 15f && (boss.transform.position.x - character1.transform.position.x) > -15f)
             {
                 attack4time-=Time.deltaTime;
                 if(attack4time < 1.5f&&attack4time>0.5f)
@@ -171,7 +174,7 @@ public class Boss : MonoBehaviour
         }
         else if (damageable.Health <= 500)
         {
-            if (randomvalue >= 6 && (boss.transform.position.x - player.transform.position.x) < 15f && (boss.transform.position.x - player.transform.position.x) > -15f)
+            if (randomvalue >= 6 && (boss.transform.position.x - character1.transform.position.x) < 15f && (boss.transform.position.x - character1.transform.position.x) > -15f)
             {
                 attack4time -= Time.deltaTime;
                 if (attack4time < 1.5f && attack4time > 0.5f)
@@ -188,7 +191,7 @@ public class Boss : MonoBehaviour
                     randomvalue = UnityEngine.Random.Range(0, 10);
                 }
             }
-            if (randomvalue < 6 && (boss.transform.position.x - player.transform.position.x) < 15f && (boss.transform.position.x - player.transform.position.x) > -15f)
+            if (randomvalue < 6 && (boss.transform.position.x - character1.transform.position.x) < 15f && (boss.transform.position.x - character1.transform.position.x) > -15f)
             {
                 attack5time -= Time.deltaTime;
                 if (attack5time < 1.5f && attack5time > 0.5f)
@@ -210,16 +213,16 @@ public class Boss : MonoBehaviour
 
 
 
-        if ((boss.transform.position.x - player.transform.position.x) > 1f || (boss.transform.position.x - player.transform.position.x )< -1f)
+        if ((boss.transform.position.x - character1.transform.position.x) > 1f || (boss.transform.position.x - character1.transform.position.x )< -1f)
         {
           
             
-                if (boss.transform.position.x <= player.transform.position.x)
+                if (boss.transform.position.x <= character1.transform.position.x)
                 {
                     WalkDirection = WalkableDirection.Right;
 
                 }
-                if (boss.transform.position.x > player.transform.position.x)
+                if (boss.transform.position.x > character1.transform.position.x)
                 {
                     WalkDirection = WalkableDirection.Left;
                 }
@@ -329,7 +332,7 @@ public class Boss : MonoBehaviour
     public void BAttack2()
     {
         Debug.Log("11");
-        if ((boss.transform.position.x-player.transform.position.x)<100f&& (boss.transform.position.x - player.transform.position.x) > -100f)
+        if ((boss.transform.position.x-character1.transform.position.x)<100f&& (boss.transform.position.x - character1.transform.position.x) > -100f)
         {
             Attack2 = true;
             rb.velocity=new Vector2(speedup,rb.velocity.y);
