@@ -8333,10 +8333,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4434211457690884792, guid: fa7f39a7af544b640b76b900bb8f77f2, type: 3}
+      propertyPath: _health
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 5076202502655982884, guid: fa7f39a7af544b640b76b900bb8f77f2, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 240519010}
+      objectReference: {fileID: 1133586611}
     - target: {fileID: 5076202502655982884, guid: fa7f39a7af544b640b76b900bb8f77f2, type: 3}
       propertyPath: attackzone
       value: 
@@ -8345,13 +8349,17 @@ PrefabInstance:
       propertyPath: cliffditectionzone
       value: 
       objectReference: {fileID: 1829140067}
+    - target: {fileID: 5076202502655982884, guid: fa7f39a7af544b640b76b900bb8f77f2, type: 3}
+      propertyPath: ctrGenerateCharacter
+      value: 
+      objectReference: {fileID: 1133586610}
     - target: {fileID: 7192434652225909216, guid: fa7f39a7af544b640b76b900bb8f77f2, type: 3}
       propertyPath: m_Name
       value: superboss
       objectReference: {fileID: 0}
     - target: {fileID: 7192434652225909216, guid: fa7f39a7af544b640b76b900bb8f77f2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8595648012127134873, guid: fa7f39a7af544b640b76b900bb8f77f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8568,6 +8576,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flyenemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8341976745350347341, guid: 9e5418c9a5d3bde48bbcaa7b95724134, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8424004655588014231, guid: 9e5418c9a5d3bde48bbcaa7b95724134, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.58
@@ -8676,6 +8688,10 @@ PrefabInstance:
     - target: {fileID: 7856343233450960504, guid: 34e21394a2774774d8c439379cf7692c, type: 3}
       propertyPath: m_Name
       value: Bat
+      objectReference: {fileID: 0}
+    - target: {fileID: 7856343233450960504, guid: 34e21394a2774774d8c439379cf7692c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8209285128906428868, guid: 34e21394a2774774d8c439379cf7692c, type: 3}
       propertyPath: waypoints.Array.data[0]
