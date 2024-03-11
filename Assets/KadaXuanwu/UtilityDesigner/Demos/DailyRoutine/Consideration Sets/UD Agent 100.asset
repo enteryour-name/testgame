@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b93118c0574eb542824b91809a335f6, type: 3}
+  m_Name: UD Agent 100
+  m_EditorClassIdentifier: 
+  stateSets:
+  - states:
+    - preconditions:
+      - designation: Precondition 1
+        considerationDesignation: 
+        comparator: 0
+        value: 0
+      evaluators:
+      - designation: Evaluator 1
+        considerationDesignation: 
+        weight: 0
+        curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        curveMinValue: 0
+        curveMaxValue: 1
+      behaviourTree:
+        rootNode:
+          rid: 4951652976353345552
+      active: 1
+      designation: Idle
+      weight: 1
+      executionFactor: 1
+      baseScore: 0
+      setMinScore: 0
+      minScore: 0
+      setMaxScore: 0
+      maxScore: 0
+      failChance: 0
+      notes: 
+    designation: State Set 1
+  considerationSets: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 4951652976353345552
+      type: {class: Root, ns: KadaXuanwu.UtilityDesigner.Scripts.Execution.Runtime, asm: UtilityDesigner}
+      data:
+        guid: 255b6867ef4df524b8b2c67d74b5e40a
+        position: {x: 375, y: 10}
+        notes: 
+        child:
+          rid: -2

@@ -1,0 +1,14 @@
+- - - Game time: 0 - - -
+STATE 'Idle' SCORED: 0
+    Precondition 'Precondition 1' met: False
+    Evaluator 'Evaluator 1' scored: NaN
+* * * * * * * * * * * * * * * *
+
+
+- - - Game time: 0.4697424 - - -
+STATE 'Idle' SCORED: 0
+    Precondition 'Precondition 1' met: False
+    Evaluator 'Evaluator 1' scored: NaN
+* * * * * * * * * * * * * * * *
+
+
