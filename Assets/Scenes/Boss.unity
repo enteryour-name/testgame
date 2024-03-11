@@ -176,7 +176,7 @@ MonoBehaviour:
   NormalStage: {fileID: 2100000, guid: c3d56a4f247a94d48b39729fd01e40d3, type: 2}
   CooldownStage: {fileID: 2100000, guid: 1c0efdc22893cc145b9173c27b03a7d1, type: 2}
   cr: {fileID: 0}
-  CoolDownTime: 6
+  CoolDownTime: 2
   firecontrol: {fileID: 749156306}
   leafranger: {fileID: 850915604}
   touching: {fileID: 0}
@@ -267,66 +267,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1309383819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &136711745
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 136711746}
-  - component: {fileID: 136711747}
-  m_Layer: 0
-  m_Name: GenerateCharacter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &136711746
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136711745}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.0136, y: -9.5483, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1309383819}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &136711747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136711745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19227ae221dfff84592c019efa0f8f33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character1: {fileID: 749156305}
-  character2: {fileID: 850915603}
-  character: {fileID: 0}
-  commu: {fileID: 0}
-  defaultvalue: 1
-  receivevalue: 0
-  camera: {fileID: 1116829420}
-  FireSkillUI: {fileID: 2014239942}
-  LeafSkillUI: {fileID: 1741159258}
-  storageData: {fileID: 417262406}
-  haveAwake: 0
-  expLevel: {fileID: 147166844}
-  levelUpMenu: {fileID: 882267065}
-  Round: 1
-  ctrLevelUpSkill: {fileID: 1255058129}
-  Refreshtime: 0
 --- !u!1 &147166842
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,7 +334,7 @@ MonoBehaviour:
   damageable: {fileID: 0}
   LevelUpMenu: {fileID: 965434383}
   character: {fileID: 0}
-  ctrGenerateCharacter: {fileID: 136711747}
+  ctrGenerateCharacter: {fileID: 1206809605}
 --- !u!1 &157195724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,7 +961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10e2160380b76b0459252f7bcb21b9af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ctrGenerateCharacter: {fileID: 136711747}
+  ctrGenerateCharacter: {fileID: 1206809605}
   expLevel: {fileID: 147166844}
   levelUpMenu: {fileID: 882267065}
 --- !u!4 &417262407
@@ -2141,7 +2081,7 @@ MonoBehaviour:
   Fire2: {fileID: 0}
   Leaf1: {fileID: 21300000, guid: c591dffb141174e4495e21631ab76926, type: 3}
   Leaf2: {fileID: 0}
-  generateCharacter: {fileID: 136711747}
+  generateCharacter: {fileID: 1206809605}
   number: 0
 --- !u!114 &760481923
 MonoBehaviour:
@@ -2272,7 +2212,7 @@ MonoBehaviour:
   NormalStage: {fileID: 2100000, guid: 1dbc1aa74c0472d44969d529c6a97705, type: 2}
   CooldownStage: {fileID: 2100000, guid: 6b3cc21a4e36ad7479d422e31a4e5f75, type: 2}
   cr: {fileID: 0}
-  CoolDownTime: 6
+  CoolDownTime: 5
   firecontrol: {fileID: 749156306}
   leafranger: {fileID: 0}
   touching: {fileID: 0}
@@ -2452,7 +2392,7 @@ MonoBehaviour:
   LATK3: {fileID: 84189844}
   LATK4: {fileID: 2000007946}
   LATK5: {fileID: 973815935}
-  ctrGenerateCharacter: {fileID: 136711747}
+  ctrGenerateCharacter: {fileID: 1206809605}
   ctrLevelUpMenu: {fileID: 882267065}
   character: {fileID: 0}
   ctrSkill: {fileID: 0}
@@ -2471,7 +2411,7 @@ MonoBehaviour:
   damageable: {fileID: 0}
   character: {fileID: 0}
   levelUpMenu: {fileID: 965434383}
-  ctrGenerateCharacter: {fileID: 136711747}
+  ctrGenerateCharacter: {fileID: 1206809605}
   monster2Attack: []
   damageUpTime: 1.3
   ctrSkill: {fileID: 0}
@@ -2548,7 +2488,7 @@ MonoBehaviour:
   NormalStage: {fileID: 2100000, guid: d7745e7c7755e7142837f12b3009c716, type: 2}
   CooldownStage: {fileID: 2100000, guid: a22bfa975c7e4434995bbf7d79042190, type: 2}
   cr: {fileID: 0}
-  CoolDownTime: 6
+  CoolDownTime: 5
   firecontrol: {fileID: 749156306}
   leafranger: {fileID: 850915604}
   touching: {fileID: 0}
@@ -3656,7 +3596,7 @@ MonoBehaviour:
   commu: {fileID: 0}
   defaultvalue: 2
   receivevalue: 0
-  camera: {fileID: 0}
+  camera: {fileID: 1116829420}
   FireSkillUI: {fileID: 2014239942}
   LeafSkillUI: {fileID: 1741159258}
   storageData: {fileID: 0}
@@ -3675,11 +3615,11 @@ Transform:
   m_GameObject: {fileID: 1206809604}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6, y: 7.5, z: 0}
+  m_LocalPosition: {x: -4.4136, y: -2.0482998, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1309383819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1218962415
 GameObject:
@@ -3860,7 +3800,7 @@ MonoBehaviour:
   LATK4: {fileID: 2000007946}
   LATK5: {fileID: 973815935}
   image: {fileID: 0}
-  ctrGenerateCharacter: {fileID: 136711747}
+  ctrGenerateCharacter: {fileID: 1206809605}
   ctrLevelUpMenu: {fileID: 882267065}
   character: {fileID: 0}
   ctrSkill: {fileID: 0}
@@ -4509,7 +4449,7 @@ Transform:
   m_Children:
   - {fileID: 102187463}
   - {fileID: 417262407}
-  - {fileID: 136711746}
+  - {fileID: 1206809606}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1340412774
@@ -6991,7 +6931,7 @@ PrefabInstance:
     - target: {fileID: 5076202502655982884, guid: fa7f39a7af544b640b76b900bb8f77f2, type: 3}
       propertyPath: ctrGenerateCharacter
       value: 
-      objectReference: {fileID: 136711747}
+      objectReference: {fileID: 1206809605}
     - target: {fileID: 7192434652225909216, guid: fa7f39a7af544b640b76b900bb8f77f2, type: 3}
       propertyPath: m_Name
       value: superboss
@@ -7200,7 +7140,7 @@ MonoBehaviour:
   NormalStage: {fileID: 2100000, guid: efe5ed29242da204c9c82d4b3587dd77, type: 2}
   CooldownStage: {fileID: 2100000, guid: 7287c303c91bec64ca41343a02f7fdf5, type: 2}
   cr: {fileID: 0}
-  CoolDownTime: 6
+  CoolDownTime: 5
   firecontrol: {fileID: 749156306}
   leafranger: {fileID: 0}
   touching: {fileID: 0}
@@ -8256,7 +8196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathmenu: {fileID: 504172195}
-  ctrGenerateCharacter: {fileID: 136711747}
+  ctrGenerateCharacter: {fileID: 1206809605}
   health: {fileID: 0}
 --- !u!1 &1766076471
 GameObject:
@@ -8395,7 +8335,7 @@ MonoBehaviour:
   NormalStage: {fileID: 2100000, guid: 1387d414c92ba0345b08853eac3b3568, type: 2}
   CooldownStage: {fileID: 2100000, guid: 1bb8bb943778e984c82871b7955a0ed6, type: 2}
   cr: {fileID: 0}
-  CoolDownTime: 6
+  CoolDownTime: 5
   firecontrol: {fileID: 749156306}
   leafranger: {fileID: 0}
   touching: {fileID: 0}
@@ -9213,7 +9153,7 @@ MonoBehaviour:
   NormalStage: {fileID: 2100000, guid: 561f8f15c3085d34eb9b563137dbe572, type: 2}
   CooldownStage: {fileID: 2100000, guid: cc84ac54d537f8e439302bd77d7ecab4, type: 2}
   cr: {fileID: 0}
-  CoolDownTime: 6
+  CoolDownTime: 5
   firecontrol: {fileID: 749156306}
   leafranger: {fileID: 850915604}
   touching: {fileID: 0}
@@ -9353,7 +9293,7 @@ MonoBehaviour:
   Fire2: {fileID: 0}
   Leaf1: {fileID: 2088653937, guid: de02698e1936014468c719591eccf910, type: 3}
   Leaf2: {fileID: 0}
-  generateCharacter: {fileID: 136711747}
+  generateCharacter: {fileID: 1206809605}
   number: 0
 --- !u!114 &2079444132
 MonoBehaviour:
@@ -9741,7 +9681,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 743580536}
-  - {fileID: 1206809606}
   - {fileID: 1116829421}
   - {fileID: 1985048401}
   - {fileID: 1358315267}

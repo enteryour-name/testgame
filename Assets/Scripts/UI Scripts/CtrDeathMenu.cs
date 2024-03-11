@@ -18,6 +18,7 @@ public class CtrDeathMenu : MonoBehaviour
         {
             ctrGenerateCharacter.Refresh();
         }
+        ctrGenerateCharacter.StartBeforeEvery();
         health = ctrGenerateCharacter.character.GetComponent<CtrPlayerHealth>();
         deathmenu.SetActive(false);
         if(deathmenu == null)
@@ -37,7 +38,9 @@ public class CtrDeathMenu : MonoBehaviour
     void Update()
     {
         if (health == null)
-        { }
+        {
+            return;
+        }
         else if (health.health <= 0 && !dead)
         {
             Time.timeScale = 0.3f;

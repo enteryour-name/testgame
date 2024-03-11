@@ -210,7 +210,7 @@ MonoBehaviour:
   NormalStage: {fileID: 2100000, guid: 1387d414c92ba0345b08853eac3b3568, type: 2}
   CooldownStage: {fileID: 2100000, guid: 1bb8bb943778e984c82871b7955a0ed6, type: 2}
   cr: {fileID: 0}
-  CoolDownTime: 6
+  CoolDownTime: 2
   firecontrol: {fileID: 196335864}
   leafranger: {fileID: 0}
   touching: {fileID: 0}
@@ -11857,7 +11857,7 @@ MonoBehaviour:
   NormalStage: {fileID: 2100000, guid: 1dbc1aa74c0472d44969d529c6a97705, type: 2}
   CooldownStage: {fileID: 2100000, guid: 6b3cc21a4e36ad7479d422e31a4e5f75, type: 2}
   cr: {fileID: 0}
-  CoolDownTime: 6
+  CoolDownTime: 5
   firecontrol: {fileID: 196335864}
   leafranger: {fileID: 0}
   touching: {fileID: 0}
@@ -12400,7 +12400,7 @@ MonoBehaviour:
   NormalStage: {fileID: 2100000, guid: efe5ed29242da204c9c82d4b3587dd77, type: 2}
   CooldownStage: {fileID: 2100000, guid: 7287c303c91bec64ca41343a02f7fdf5, type: 2}
   cr: {fileID: 0}
-  CoolDownTime: 6
+  CoolDownTime: 5
   firecontrol: {fileID: 196335864}
   leafranger: {fileID: 0}
   touching: {fileID: 0}
@@ -14845,7 +14845,7 @@ MonoBehaviour:
   NormalStage: {fileID: 2100000, guid: c3d56a4f247a94d48b39729fd01e40d3, type: 2}
   CooldownStage: {fileID: 2100000, guid: 1c0efdc22893cc145b9173c27b03a7d1, type: 2}
   cr: {fileID: 0}
-  CoolDownTime: 6
+  CoolDownTime: 2
   firecontrol: {fileID: 196335864}
   leafranger: {fileID: 109493542}
   touching: {fileID: 0}
@@ -18839,7 +18839,7 @@ MonoBehaviour:
   NormalStage: {fileID: 2100000, guid: d7745e7c7755e7142837f12b3009c716, type: 2}
   CooldownStage: {fileID: 2100000, guid: a22bfa975c7e4434995bbf7d79042190, type: 2}
   cr: {fileID: 0}
-  CoolDownTime: 6
+  CoolDownTime: 5
   firecontrol: {fileID: 196335864}
   leafranger: {fileID: 109493542}
   touching: {fileID: 0}
@@ -19671,7 +19671,7 @@ MonoBehaviour:
   NormalStage: {fileID: 2100000, guid: 561f8f15c3085d34eb9b563137dbe572, type: 2}
   CooldownStage: {fileID: 2100000, guid: cc84ac54d537f8e439302bd77d7ecab4, type: 2}
   cr: {fileID: 0}
-  CoolDownTime: 6
+  CoolDownTime: 5
   firecontrol: {fileID: 196335864}
   leafranger: {fileID: 109493542}
   touching: {fileID: 0}
